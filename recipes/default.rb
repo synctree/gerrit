@@ -18,16 +18,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-user "gerrit2" do
-  uid "2345"
-  gid "gerrit2"
-  home "/home/gerrit2"
+user node['gerrit']['user'] do
+  uid node['gerrit']['uid']
+  gid node['gerrit']['group']
+  home "/home/#{node['gerrit']['user']}"
   comment "Gerrit system user"
   action :manage
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/gerrit.war" do
-  owner "gerrit2"
+  owner node['gerrit']['user']
   source "http://gerrit.googlecode.com/files/gerrit-#{node['gerrit']['version']}.war"
   checksum node['gerrit']['checksum'][node['gerrit']['version']]
 end
@@ -79,11 +79,11 @@ require_recipe "java"
 require_recipe "git"
 
 bash "Initializing Gerrit site" do
-  user "gerrit2"
-  group "gerrit2"
+  user node['gerrit']['user']
+  group node['gerrit']['group']
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-  java -jar gerrit.war init -d /home/gerrit2/review_site
+  java -jar gerrit.war init -d /home/#{node['gerrit']['user']}/review_site
   EOH
 end
 
@@ -92,15 +92,15 @@ end
 #end
 
 bash "Starting gerrit daemon" do
-  user "gerrit2"
-  group "gerrit2"
+  user node['gerrit']['user']
+  group node['gerrit']['group']
   code <<-EOH
-  /home/gerrit2/review_site/bin/gerrit.sh start
+  /home/#{node['gerrit']['user']}/review_site/bin/gerrit.sh start
   EOH
 end
 
 link "/etc/init.d/gerrit.sh" do
-  to "/home/gerrit2/review_site/bin/gerrit.sh"
+  to "/home/#{node['gerrit']['user']}/review_site/bin/gerrit.sh"
 end
 
 link "/etc/rc3.d/S90gerrit" do

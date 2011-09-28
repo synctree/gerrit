@@ -23,6 +23,10 @@ default['gerrit']['checksum'] = {
   '2.2.1' => "8af3c50c8b"
 }
 
+default['gerrit']['user'] = "gerrit2"
+default['gerrit']['uid'] = 2345
+default['gerrit']['group'] = "gerrit2"
+
 default['gerrit']['hostname'] = node['fqdn']
 default['gerrit']['port'] = "29418"
 default['gerrit']['frontend_url'] = "http://#{node['fqdn']}:8080/"
