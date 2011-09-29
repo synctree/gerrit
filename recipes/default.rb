@@ -85,18 +85,35 @@ directory node['gerrit']['install_dir'] do
   action :create
 end
 
+directory "#{node['gerrit']['install_dir']}/etc" do
+  owner node['gerrit']['user']
+  owner node['gerrit']['group']
+  mode "0700"
+  action :create
+end
+
+template "#{node['gerrit']['install_dir']}/etc/gerrit.config" do
+  source "gerrit.config"
+  owner node['gerrit']['user']
+  group node['gerrit']['group']
+  mode 0600
+end
+
+template "#{node['gerrit']['install_dir']}/etc/secure.config" do
+  source "secure.config"
+  owner node['gerrit']['user']
+  group node['gerrit']['group']
+  mode 0600
+end
+
 bash "Initializing Gerrit site" do
   user node['gerrit']['user']
   group node['gerrit']['group']
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-  java -jar gerrit.war init -d #{node['gerrit']['install_dir']}
+  java -jar gerrit.war init --batch --no-auto-start -d #{node['gerrit']['install_dir']}
   EOH
 end
-
-#template "" do
-#  source
-#end
 
 bash "Starting gerrit daemon" do
   user node['gerrit']['user']
