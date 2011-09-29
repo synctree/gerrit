@@ -78,12 +78,19 @@ end
 require_recipe "java"
 require_recipe "git"
 
+directory node['gerrit']['install_dir'] do
+  owner node['gerrit']['user']
+  owner node['gerrit']['group']
+  mode "0700"
+  action :create
+end
+
 bash "Initializing Gerrit site" do
   user node['gerrit']['user']
   group node['gerrit']['group']
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-  java -jar gerrit.war init -d /home/#{node['gerrit']['user']}/review_site
+  java -jar gerrit.war init -d #{node['gerrit']['install_dir']}
   EOH
 end
 
@@ -95,12 +102,12 @@ bash "Starting gerrit daemon" do
   user node['gerrit']['user']
   group node['gerrit']['group']
   code <<-EOH
-  /home/#{node['gerrit']['user']}/review_site/bin/gerrit.sh start
+  #{node['gerrit']['install_dir']}/bin/gerrit.sh start
   EOH
 end
 
 link "/etc/init.d/gerrit.sh" do
-  to "/home/#{node['gerrit']['user']}/review_site/bin/gerrit.sh"
+  to "#{node['gerrit']['install_dir']}/bin/gerrit.sh"
 end
 
 link "/etc/rc3.d/S90gerrit" do

@@ -27,6 +27,8 @@ default['gerrit']['user'] = "gerrit2"
 default['gerrit']['uid'] = 2345
 default['gerrit']['group'] = "gerrit2"
 
+default['gerrit']['install_dir'] = "/home/#{node['gerrit']['user']}/review_site"
+
 default['gerrit']['hostname'] = node['fqdn']
 default['gerrit']['port'] = "29418"
 default['gerrit']['frontend_url'] = "http://#{node['fqdn']}:8080/"
