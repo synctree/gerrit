@@ -20,31 +20,32 @@
 
 ssh_key_filename = "id_rsa-gerrit-code-review"
 ssh_key = node['gerrit']['home'] + "/.ssh/" + ssh_key_filename
+public_key = node['gerrit']['peer_keys']['public']
+private_key = node['gerrit']['peer_keys']['private']
 
-if node['gerrit']['peer_keys']['public'] == nil
+execute "generate private ssh key for 'Gerrit Code Review' user" do
+  command "ssh-keygen -t rsa -q -f #{ssh_key} -P \"\" -C\"Gerrit Code Review@" + node['gerrit']['hostname'] + "\""
+  user node['gerrit']['user']
+  group node['gerrit']['group']
+  creates ssh_key
+  only_if { public_key.to_s == "" }
+end
 
-  execute "generate private ssh key for 'Gerrit Code Review' user" do
-    command "ssh-keygen -t rsa -q -f #{ssh_key} -P \"\""
-    user node['gerrit']['user']
-    group node['gerrit']['group']
-    creates ssh_key
-  end
-
-  ruby_block "save keys to attributes" do
-    block do
-      private_key = File.open(ssh_key, "r").gets
-      public_key = File.open(ssh_key + ".pub", "r").gets
-      node.set['gerrit']['peer_keys']['private'] = private_key
-      node.set['gerrit']['peer_keys']['public'] = public_key
-    end
+ruby_block "save keys to attributes" do
+  only_if { public_key.to_s == "" }
+  block do
+    private_key = File.read(ssh_key)
+    public_key = File.read(ssh_key + ".pub")
+    node.set['gerrit']['peer_keys']['private'] = private_key
+    node.set['gerrit']['peer_keys']['public'] = public_key
   end
 end
 
 file node['gerrit']['install_dir'] + "/etc/peer_keys" do
-  contents = node['gerrit']['peer_keys']['public'].split(" ").slice(1)
+  content public_key.split(" ").slice(1)
   owner node['gerrit']['user']
   group node['gerrit']['user']
-  notifies :restart, "service[gerrit]"
+  only_if { public_key.to_s != "" }
 end
 
 file ssh_key do
@@ -52,6 +53,7 @@ file ssh_key do
   owner node['gerrit']['user']
   group node['gerrit']['group']
   mode 0600
+  only_if { ssh_key != "" }
 end
 
 file ssh_key + ".pub" do
