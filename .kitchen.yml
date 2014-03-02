@@ -6,6 +6,7 @@ provisioner:
   name: chef_zero
 
 platforms:
+  - name: centos-6.5
   - name: debian-wheezy
   - name: ubuntu-12.04
 
