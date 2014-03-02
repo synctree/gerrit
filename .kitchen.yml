@@ -2,7 +2,7 @@
 driver_plugin: docker
 
 platforms:
-  - name: centos-6.4
+  - name: debian-wheezy
   - name: ubuntu-12.04
 
 suites:
