@@ -1,0 +1,228 @@
+I, [2014-03-02T10:21:57.058110 #40290]  INFO -- default-ubuntu-1204: -----> Cleaning up any prior instances of <default-ubuntu-1204>
+I, [2014-03-02T10:21:57.058330 #40290]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+I, [2014-03-02T10:21:57.062552 #40290]  INFO -- default-ubuntu-1204: Finished destroying <default-ubuntu-1204> (0m0.00s).
+I, [2014-03-02T10:21:57.062850 #40290]  INFO -- default-ubuntu-1204: -----> Testing <default-ubuntu-1204>
+I, [2014-03-02T10:21:57.062993 #40290]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2014-03-02T10:21:59.796495 #40290]  INFO -- default-ubuntu-1204: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2014-03-02T10:21:59.983984 #40290]  INFO -- default-ubuntu-1204: [default] Box 'opscode-ubuntu-12.04' was not found. Fetching box from specified URL for
+I, [2014-03-02T10:21:59.984060 #40290]  INFO -- default-ubuntu-1204: the provider 'virtualbox'. Note that if the URL does not have
+I, [2014-03-02T10:21:59.984092 #40290]  INFO -- default-ubuntu-1204: a box for this provider, you should interrupt Vagrant now and add
+I, [2014-03-02T10:21:59.984125 #40290]  INFO -- default-ubuntu-1204: the box yourself. Otherwise Vagrant will attempt to download the
+I, [2014-03-02T10:21:59.984156 #40290]  INFO -- default-ubuntu-1204: full box prior to discovering this error.
+I, [2014-03-02T10:21:59.998113 #40290]  INFO -- default-ubuntu-1204: Downloading box from URL: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
+Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)Progress: 0% (Rate: 99k/s, Estimated time remaining: 1:41:11)Progress: 0% (Rate: 858k/s, Estimated time remaining: 0:10:34)Progress: 1% (Rate: 1654k/s, Estimated time remaining: 0:05:11)Progress: 1% (Rate: 1705k/s, Estimated time remaining: 0:04:52)Progress: 1% (Rate: 1638k/s, Estimated time remaining: 0:05:39)Progress: 2% (Rate: 1891k/s, Estimated time remaining: 0:05:24)Progress: 2% (Rate: 2084k/s, Estimated time remaining: 0:04:43)Progress: 3% (Rate: 2030k/s, Estimated time remaining: 0:04:09)Progress: 4% (Rate: 2360k/s, Estimated time remaining: 0:03:45)Progress: 4% (Rate: 2402k/s, Estimated time remaining: 0:04:01)Progress: 4% (Rate: 2193k/s, Estimated time remaining: 0:04:14)Progress: 5% (Rate: 2236k/s, Estimated time remaining: 0:03:57)Progress: 5% (Rate: 2255k/s, Estimated time remaining: 0:03:41)Progress: 6% (Rate: 2257k/s, Estimated time remaining: 0:03:28)Progress: 7% (Rate: 2915k/s, Estimated time remaining: 0:03:17)Progress: 8% (Rate: 3458k/s, Estimated time remaining: 0:03:09)Progress: 9% (Rate: 3549k/s, Estimated time remaining: 0:03:01)Progress: 9% (Rate: 3575k/s, Estimated time remaining: 0:02:54)Progress: 10% (Rate: 3579k/s, Estimated time remaining: 0:02:48)Progress: 11% (Rate: 3557k/s, Estimated time remaining: 0:02:44)Progress: 12% (Rate: 3521k/s, Estimated time remaining: 0:02:40)Progress: 12% (Rate: 3491k/s, Estimated time remaining: 0:02:36)Progress: 13% (Rate: 3434k/s, Estimated time remaining: 0:02:33)Progress: 14% (Rate: 3389k/s, Estimated time remaining: 0:02:30)Progress: 15% (Rate: 3408k/s, Estimated time remaining: 0:02:26)Progress: 15% (Rate: 3419k/s, Estimated time remaining: 0:02:24)Progress: 16% (Rate: 3377k/s, Estimated time remaining: 0:02:21)Progress: 17% (Rate: 3406k/s, Estimated time remaining: 0:02:19)Progress: 18% (Rate: 3404k/s, Estimated time remaining: 0:02:17)Progress: 18% (Rate: 3389k/s, Estimated time remaining: 0:02:14)Progress: 19% (Rate: 3408k/s, Estimated time remaining: 0:02:12)Progress: 20% (Rate: 3413k/s, Estimated time remaining: 0:02:10)Progress: 21% (Rate: 3413k/s, Estimated time remaining: 0:02:08)Progress: 21% (Rate: 3448k/s, Estimated time remaining: 0:02:06)Progress: 22% (Rate: 3429k/s, Estimated time remaining: 0:02:04)Progress: 23% (Rate: 3434k/s, Estimated time remaining: 0:02:02)Progress: 24% (Rate: 3455k/s, Estimated time remaining: 0:02:00)Progress: 24% (Rate: 3450k/s, Estimated time remaining: 0:01:58)Progress: 25% (Rate: 3448k/s, Estimated time remaining: 0:01:57)Progress: 26% (Rate: 3443k/s, Estimated time remaining: 0:01:55)Progress: 27% (Rate: 3448k/s, Estimated time remaining: 0:01:53)Progress: 27% (Rate: 3441k/s, Estimated time remaining: 0:01:52)Progress: 28% (Rate: 3438k/s, Estimated time remaining: 0:01:50)Progress: 28% (Rate: 2972k/s, Estimated time remaining: 0:01:51)Progress: 28% (Rate: 2341k/s, Estimated time remaining: 0:01:54)Progress: 29% (Rate: 2200k/s, Estimated time remaining: 0:01:53)Progress: 30% (Rate: 2225k/s, Estimated time remaining: 0:01:51)Progress: 31% (Rate: 2169k/s, Estimated time remaining: 0:01:49)Progress: 31% (Rate: 2067k/s, Estimated time remaining: 0:01:50)Progress: 31% (Rate: 2160k/s, Estimated time remaining: 0:01:53)Progress: 31% (Rate: 2245k/s, Estimated time remaining: 0:01:51)Progress: 32% (Rate: 2237k/s, Estimated time remaining: 0:01:49)Progress: 33% (Rate: 2242k/s, Estimated time remaining: 0:01:48)Progress: 34% (Rate: 2804k/s, Estimated time remaining: 0:01:46)Progress: 34% (Rate: 3324k/s, Estimated time remaining: 0:01:45)Progress: 35% (Rate: 3378k/s, Estimated time remaining: 0:01:43)Progress: 36% (Rate: 3371k/s, Estimated time remaining: 0:01:42)Progress: 37% (Rate: 3400k/s, Estimated time remaining: 0:01:40)Progress: 37% (Rate: 3409k/s, Estimated time remaining: 0:01:39)Progress: 38% (Rate: 3463k/s, Estimated time remaining: 0:01:37)Progress: 39% (Rate: 3467k/s, Estimated time remaining: 0:01:36)Progress: 40% (Rate: 3475k/s, Estimated time remaining: 0:01:34)Progress: 40% (Rate: 3510k/s, Estimated time remaining: 0:01:33)Progress: 41% (Rate: 3532k/s, Estimated time remaining: 0:01:31)Progress: 42% (Rate: 3501k/s, Estimated time remaining: 0:01:30)Progress: 43% (Rate: 3493k/s, Estimated time remaining: 0:01:28)Progress: 43% (Rate: 3455k/s, Estimated time remaining: 0:01:27)Progress: 44% (Rate: 3445k/s, Estimated time remaining: 0:01:26)Progress: 45% (Rate: 3424k/s, Estimated time remaining: 0:01:24)Progress: 46% (Rate: 3459k/s, Estimated time remaining: 0:01:23)Progress: 47% (Rate: 3454k/s, Estimated time remaining: 0:01:22)Progress: 47% (Rate: 3498k/s, Estimated time remaining: 0:01:20)Progress: 48% (Rate: 3512k/s, Estimated time remaining: 0:01:19)Progress: 49% (Rate: 3531k/s, Estimated time remaining: 0:01:17)Progress: 50% (Rate: 3506k/s, Estimated time remaining: 0:01:16)Progress: 50% (Rate: 3492k/s, Estimated time remaining: 0:01:15)Progress: 51% (Rate: 3526k/s, Estimated time remaining: 0:01:13)Progress: 52% (Rate: 3304k/s, Estimated time remaining: 0:01:12)Progress: 52% (Rate: 2719k/s, Estimated time remaining: 0:01:12)Progress: 52% (Rate: 2305k/s, Estimated time remaining: 0:01:13)Progress: 53% (Rate: 2313k/s, Estimated time remaining: 0:01:12)Progress: 54% (Rate: 2246k/s, Estimated time remaining: 0:01:11)Progress: 54% (Rate: 2425k/s, Estimated time remaining: 0:01:10)Progress: 55% (Rate: 3038k/s, Estimated time remaining: 0:01:08)Progress: 56% (Rate: 3442k/s, Estimated time remaining: 0:01:07)Progress: 57% (Rate: 3447k/s, Estimated time remaining: 0:01:06)Progress: 57% (Rate: 2999k/s, Estimated time remaining: 0:01:05)Progress: 57% (Rate: 2402k/s, Estimated time remaining: 0:01:05)Progress: 58% (Rate: 2213k/s, Estimated time remaining: 0:01:06)Progress: 58% (Rate: 2227k/s, Estimated time remaining: 0:01:04)Progress: 59% (Rate: 2232k/s, Estimated time remaining: 0:01:03)Progress: 60% (Rate: 2690k/s, Estimated time remaining: 0:01:02)Progress: 60% (Rate: 3232k/s, Estimated time remaining: 0:01:01)Progress: 61% (Rate: 3399k/s, Estimated time remaining: 0:00:59)Progress: 62% (Rate: 3380k/s, Estimated time remaining: 0:00:58)Progress: 63% (Rate: 3354k/s, Estimated time remaining: 0:00:57)Progress: 63% (Rate: 3306k/s, Estimated time remaining: 0:00:56)Progress: 64% (Rate: 3369k/s, Estimated time remaining: 0:00:55)Progress: 65% (Rate: 3385k/s, Estimated time remaining: 0:00:53)Progress: 66% (Rate: 3385k/s, Estimated time remaining: 0:00:52)Progress: 66% (Rate: 2946k/s, Estimated time remaining: 0:00:52)Progress: 66% (Rate: 2338k/s, Estimated time remaining: 0:00:51)Progress: 66% (Rate: 1900k/s, Estimated time remaining: 0:00:51)Progress: 67% (Rate: 1443k/s, Estimated time remaining: 0:00:52)Progress: 67% (Rate: 1314k/s, Estimated time remaining: 0:00:51)Progress: 68% (Rate: 1682k/s, Estimated time remaining: 0:00:50)Progress: 68% (Rate: 2235k/s, Estimated time remaining: 0:00:49)Progress: 69% (Rate: 2635k/s, Estimated time remaining: 0:00:48)Progress: 70% (Rate: 2976k/s, Estimated time remaining: 0:00:47)Progress: 70% (Rate: 3047k/s, Estimated time remaining: 0:00:46)Progress: 71% (Rate: 3069k/s, Estimated time remaining: 0:00:45)Progress: 72% (Rate: 3107k/s, Estimated time remaining: 0:00:44)Progress: 73% (Rate: 3128k/s, Estimated time remaining: 0:00:43)Progress: 73% (Rate: 3230k/s, Estimated time remaining: 0:00:41)Progress: 74% (Rate: 3309k/s, Estimated time remaining: 0:00:40)Progress: 75% (Rate: 3369k/s, Estimated time remaining: 0:00:39)Progress: 76% (Rate: 3443k/s, Estimated time remaining: 0:00:38)Progress: 76% (Rate: 3496k/s, Estimated time remaining: 0:00:36)Progress: 77% (Rate: 3478k/s, Estimated time remaining: 0:00:35)Progress: 78% (Rate: 3498k/s, Estimated time remaining: 0:00:34)Progress: 79% (Rate: 3524k/s, Estimated time remaining: 0:00:33)Progress: 79% (Rate: 3534k/s, Estimated time remaining: 0:00:31)Progress: 80% (Rate: 3540k/s, Estimated time remaining: 0:00:30)Progress: 81% (Rate: 3099k/s, Estimated time remaining: 0:00:29)Progress: 81% (Rate: 2507k/s, Estimated time remaining: 0:00:29)Progress: 81% (Rate: 2034k/s, Estimated time remaining: 0:00:28)Progress: 81% (Rate: 1340k/s, Estimated time remaining: 0:00:29)Progress: 81% (Rate: 847k/s, Estimated time remaining: 0:00:29)Progress: 82% (Rate: 1003k/s, Estimated time remaining: 0:00:29)Progress: 82% (Rate: 1512k/s, Estimated time remaining: 0:00:28)Progress: 83% (Rate: 1945k/s, Estimated time remaining: 0:00:26)Progress: 84% (Rate: 2641k/s, Estimated time remaining: 0:00:25)Progress: 84% (Rate: 2958k/s, Estimated time remaining: 0:00:24)Progress: 85% (Rate: 3056k/s, Estimated time remaining: 0:00:23)Progress: 86% (Rate: 3086k/s, Estimated time remaining: 0:00:22)Progress: 86% (Rate: 3093k/s, Estimated time remaining: 0:00:21)Progress: 87% (Rate: 3114k/s, Estimated time remaining: 0:00:20)Progress: 88% (Rate: 3220k/s, Estimated time remaining: 0:00:19)Progress: 89% (Rate: 3332k/s, Estimated time remaining: 0:00:17)Progress: 89% (Rate: 3443k/s, Estimated time remaining: 0:00:16)Progress: 90% (Rate: 3353k/s, Estimated time remaining: 0:00:14)Progress: 90% (Rate: 2861k/s, Estimated time remaining: 0:00:14)Progress: 90% (Rate: 2369k/s, Estimated time remaining: 0:00:15)Progress: 91% (Rate: 2311k/s, Estimated time remaining: 0:00:14)Progress: 92% (Rate: 2315k/s, Estimated time remaining: 0:00:12)Progress: 93% (Rate: 2509k/s, Estimated time remaining: 0:00:11)Progress: 94% (Rate: 3122k/s, Estimated time remaining: 0:00:10)Progress: 94% (Rate: 3640k/s, Estimated time remaining: 0:00:08)Progress: 95% (Rate: 3704k/s, Estimated time remaining: 0:00:07)Progress: 96% (Rate: 3700k/s, Estimated time remaining: 0:00:06)Progress: 97% (Rate: 3689k/s, Estimated time remaining: 0:00:05)Progress: 98% (Rate: 3693k/s, Estimated time remaining: 0:00:03)Progress: 98% (Rate: 3693k/s, Estimated time remaining: 0:00:02)Progress: 99% (Rate: 3687k/s, Estimated time remaining: 0:00:01)I, [2014-03-02T10:24:35.286719 #40290]  INFO -- default-ubuntu-1204: Extracting box...
+I, [2014-03-02T10:24:43.460493 #40290]  INFO -- default-ubuntu-1204: Successfully added box 'opscode-ubuntu-12.04' with provider 'virtualbox'!
+I, [2014-03-02T10:24:48.330015 #40290]  INFO -- default-ubuntu-1204: [default] Importing base box 'opscode-ubuntu-12.04'...
+Progress: 10%Progress: 30%Progress: 40%Progress: 50%Progress: 60%Progress: 70%Progress: 80%Progress: 90%I, [2014-03-02T10:25:00.515290 #40290]  INFO -- default-ubuntu-1204: [default] Matching MAC address for NAT networking...
+I, [2014-03-02T10:25:01.173957 #40290]  INFO -- default-ubuntu-1204: [default] Setting the name of the VM...
+I, [2014-03-02T10:25:01.208538 #40290]  INFO -- default-ubuntu-1204: [default] Clearing any previously set forwarded ports...
+I, [2014-03-02T10:25:01.272186 #40290]  INFO -- default-ubuntu-1204: [Berkshelf] Skipping Berkshelf with --no-provision
+I, [2014-03-02T10:25:01.736384 #40290]  INFO -- default-ubuntu-1204: [default] Fixed port collision for 22 => 2222. Now on port 2201.
+I, [2014-03-02T10:25:01.769366 #40290]  INFO -- default-ubuntu-1204: [default] Clearing any previously set network interfaces...
+I, [2014-03-02T10:25:01.807773 #40290]  INFO -- default-ubuntu-1204: [default] Preparing network interfaces based on configuration...
+I, [2014-03-02T10:25:01.842647 #40290]  INFO -- default-ubuntu-1204: [default] Forwarding ports...
+I, [2014-03-02T10:25:01.903490 #40290]  INFO -- default-ubuntu-1204: [default] -- 22 => 2201 (adapter 1)
+I, [2014-03-02T10:25:04.126146 #40290]  INFO -- default-ubuntu-1204: [default] Running 'pre-boot' VM customizations...
+I, [2014-03-02T10:25:04.163011 #40290]  INFO -- default-ubuntu-1204: [default] Booting VM...
+[default] Waiting for machine to boot. This may take a few minutes...I, [2014-03-02T10:25:20.513042 #40290]  INFO -- default-ubuntu-1204: [default] Machine booted and ready!
+I, [2014-03-02T10:25:20.548595 #40290]  INFO -- default-ubuntu-1204: [default] Setting hostname...
+I, [2014-03-02T10:25:28.543850 #40290]  INFO -- default-ubuntu-1204: Vagrant instance <default-ubuntu-1204> created.
+I, [2014-03-02T10:25:28.548216 #40290]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (3m31.48s).
+I, [2014-03-02T10:25:28.548650 #40290]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2014-03-02T10:25:28.550498 #40290]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2014-03-02T10:25:28.551394 #40290]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 3.0.0.beta6...
+I, [2014-03-02T10:40:43.976911 #41981]  INFO -- default-ubuntu-1204: -----> Cleaning up any prior instances of <default-ubuntu-1204>
+I, [2014-03-02T10:40:43.978327 #41981]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+I, [2014-03-02T10:40:44.519097 #41981]  INFO -- default-ubuntu-1204: You appear to be running Vagrant in a Bundler environment. Because
+I, [2014-03-02T10:40:44.519609 #41981]  INFO -- default-ubuntu-1204: Vagrant should be run within installers (outside of Bundler), Vagrant
+I, [2014-03-02T10:40:44.519662 #41981]  INFO -- default-ubuntu-1204: will assume that you're developing plugins and will change its behavior
+I, [2014-03-02T10:40:44.519711 #41981]  INFO -- default-ubuntu-1204: in certain ways to better assist plugin development.
+I, [2014-03-02T10:40:45.427448 #41981]  INFO -- default-ubuntu-1204: [default] Forcing shutdown of VM...
+I, [2014-03-02T10:40:46.521530 #41981]  INFO -- default-ubuntu-1204: [default] Destroying VM and associated drives...
+I, [2014-03-02T10:40:47.522178 #41981]  INFO -- default-ubuntu-1204: Vagrant instance <default-ubuntu-1204> destroyed.
+I, [2014-03-02T10:40:47.525450 #41981]  INFO -- default-ubuntu-1204: Finished destroying <default-ubuntu-1204> (0m3.54s).
+I, [2014-03-02T10:40:47.525772 #41981]  INFO -- default-ubuntu-1204: -----> Testing <default-ubuntu-1204>
+I, [2014-03-02T10:40:47.525952 #41981]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2014-03-02T10:40:48.043552 #41981]  INFO -- default-ubuntu-1204: You appear to be running Vagrant in a Bundler environment. Because
+I, [2014-03-02T10:40:48.043648 #41981]  INFO -- default-ubuntu-1204: Vagrant should be run within installers (outside of Bundler), Vagrant
+I, [2014-03-02T10:40:48.043674 #41981]  INFO -- default-ubuntu-1204: will assume that you're developing plugins and will change its behavior
+I, [2014-03-02T10:40:48.043699 #41981]  INFO -- default-ubuntu-1204: in certain ways to better assist plugin development.
+I, [2014-03-02T10:40:48.114628 #41981]  INFO -- default-ubuntu-1204: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2014-03-02T10:40:48.244654 #41981]  INFO -- default-ubuntu-1204: [default] Importing base box 'opscode-ubuntu-12.04'...
+Progress: 10%Progress: 30%Progress: 40%Progress: 50%Progress: 60%Progress: 70%Progress: 80%Progress: 90%I, [2014-03-02T10:40:59.353598 #41981]  INFO -- default-ubuntu-1204: [default] Matching MAC address for NAT networking...
+I, [2014-03-02T10:40:59.851538 #41981]  INFO -- default-ubuntu-1204: [default] Setting the name of the VM...
+I, [2014-03-02T10:40:59.882251 #41981]  INFO -- default-ubuntu-1204: [default] Clearing any previously set forwarded ports...
+I, [2014-03-02T10:41:00.349999 #41981]  INFO -- default-ubuntu-1204: [default] Fixed port collision for 22 => 2222. Now on port 2201.
+I, [2014-03-02T10:41:00.376909 #41981]  INFO -- default-ubuntu-1204: [default] Clearing any previously set network interfaces...
+I, [2014-03-02T10:41:00.410661 #41981]  INFO -- default-ubuntu-1204: [default] Preparing network interfaces based on configuration...
+I, [2014-03-02T10:41:00.440585 #41981]  INFO -- default-ubuntu-1204: [default] Forwarding ports...
+I, [2014-03-02T10:41:00.496613 #41981]  INFO -- default-ubuntu-1204: [default] -- 22 => 2201 (adapter 1)
+I, [2014-03-02T10:41:02.679846 #41981]  INFO -- default-ubuntu-1204: [default] Running 'pre-boot' VM customizations...
+I, [2014-03-02T10:41:02.708935 #41981]  INFO -- default-ubuntu-1204: [default] Booting VM...
+I, [2014-03-02T10:41:02.958873 #41981]  INFO -- default-ubuntu-1204: [default] Waiting for machine to boot. This may take a few minutes...
+I, [2014-03-02T10:41:18.965965 #41981]  INFO -- default-ubuntu-1204: [default] Machine booted and ready!
+I, [2014-03-02T10:41:18.996795 #41981]  INFO -- default-ubuntu-1204: [default] Setting hostname...
+I, [2014-03-02T10:41:26.574041 #41981]  INFO -- default-ubuntu-1204: Vagrant instance <default-ubuntu-1204> created.
+I, [2014-03-02T10:41:26.575271 #41981]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (0m39.05s).
+I, [2014-03-02T10:41:26.575679 #41981]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2014-03-02T10:41:26.576736 #41981]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2014-03-02T10:41:26.577362 #41981]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 3.0.0.beta7...
+E, [2014-03-02T10:49:28.790941 #41981] ERROR -- default-ubuntu-1204: Converge failed on instance <default-ubuntu-1204>.
+E, [2014-03-02T10:49:28.791327 #41981] ERROR -- default-ubuntu-1204: ------Exception-------
+E, [2014-03-02T10:49:28.791473 #41981] ERROR -- default-ubuntu-1204: Class: Interrupt
+E, [2014-03-02T10:49:28.791516 #41981] ERROR -- default-ubuntu-1204: Message: 
+E, [2014-03-02T10:49:28.791539 #41981] ERROR -- default-ubuntu-1204: ------Backtrace-------
+E, [2014-03-02T10:49:28.791559 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/version.rb:11:in `split'
+E, [2014-03-02T10:49:28.791580 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/version.rb:55:in `initialize'
+E, [2014-03-02T10:49:28.791600 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/constraint.rb:190:in `new'
+E, [2014-03-02T10:49:28.791619 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/constraint.rb:190:in `satisfies?'
+E, [2014-03-02T10:49:28.791639 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:254:in `block (2 levels) in possible_values_for'
+E, [2014-03-02T10:49:28.791659 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:254:in `reject'
+E, [2014-03-02T10:49:28.791678 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:254:in `block in possible_values_for'
+E, [2014-03-02T10:49:28.791710 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:253:in `each'
+E, [2014-03-02T10:49:28.791732 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:253:in `inject'
+E, [2014-03-02T10:49:28.791752 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:253:in `possible_values_for'
+E, [2014-03-02T10:49:28.791772 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:289:in `reset_possible_values_for'
+E, [2014-03-02T10:49:28.791791 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:315:in `block in backtrack'
+E, [2014-03-02T10:49:28.791810 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:314:in `each'
+E, [2014-03-02T10:49:28.791830 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:314:in `backtrack'
+E, [2014-03-02T10:49:28.791849 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve/solver.rb:118:in `resolve'
+E, [2014-03-02T10:49:28.791868 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/solve-0.8.2/lib/solve.rb:39:in `it!'
+E, [2014-03-02T10:49:28.791887 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/berkshelf-8e8dbe073873/lib/berkshelf/resolver.rb:73:in `resolve'
+E, [2014-03-02T10:49:28.791936 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/berkshelf-8e8dbe073873/lib/berkshelf/installer.rb:104:in `install_from_universe'
+E, [2014-03-02T10:49:28.791956 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/berkshelf-8e8dbe073873/lib/berkshelf/installer.rb:37:in `run'
+E, [2014-03-02T10:49:28.791976 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/berkshelf-8e8dbe073873/lib/berkshelf/berksfile.rb:364:in `install'
+E, [2014-03-02T10:49:28.791995 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/berkshelf-8e8dbe073873/lib/berkshelf/berksfile.rb:558:in `vendor'
+E, [2014-03-02T10:49:28.792014 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef/berkshelf.rb:55:in `block in resolve'
+E, [2014-03-02T10:49:28.792033 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/shell/basic.rb:19:in `mute'
+E, [2014-03-02T10:49:28.792052 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef/berkshelf.rb:51:in `resolve'
+E, [2014-03-02T10:49:28.792071 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:394:in `block in resolve_with_berkshelf'
+E, [2014-03-02T10:49:28.792090 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:393:in `synchronize'
+E, [2014-03-02T10:49:28.792109 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:393:in `resolve_with_berkshelf'
+E, [2014-03-02T10:49:28.792128 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:259:in `prepare_cookbooks'
+E, [2014-03-02T10:49:28.792155 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:120:in `create_sandbox'
+E, [2014-03-02T10:49:28.792176 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_solo.rb:33:in `create_sandbox'
+E, [2014-03-02T10:49:28.792196 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:40:in `converge'
+E, [2014-03-02T10:49:28.792215 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/kitchen-vagrant-0.14.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2014-03-02T10:49:28.792233 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-03-02T10:49:28.792253 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-03-02T10:49:28.792272 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2014-03-02T10:49:28.792309 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2014-03-02T10:49:28.792329 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-03-02T10:49:28.792348 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2014-03-02T10:49:28.792367 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2014-03-02T10:49:28.792386 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-03-02T10:49:28.792405 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2014-03-02T10:49:28.792423 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-03-02T10:49:28.792442 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2014-03-02T10:49:28.792461 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-03-02T10:49:28.792480 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:141:in `verify'
+E, [2014-03-02T10:49:28.792499 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:170:in `block in test'
+E, [2014-03-02T10:49:28.792518 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2014-03-02T10:49:28.792537 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:166:in `test'
+E, [2014-03-02T10:49:28.792555 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:51:in `block (2 levels) in define'
+E, [2014-03-02T10:49:28.792581 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-03-02T10:49:28.792602 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:28.792621 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:28.792644 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:109:in `invoke'
+E, [2014-03-02T10:49:28.792663 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:57:in `block (2 levels) in define'
+E, [2014-03-02T10:49:28.792703 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/delegate.rb:72:in `each'
+E, [2014-03-02T10:49:28.792723 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/delegate.rb:72:in `method_missing'
+E, [2014-03-02T10:49:28.792742 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:57:in `block in define'
+E, [2014-03-02T10:49:28.792761 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-03-02T10:49:28.792780 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:28.792799 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:28.792818 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-03-02T10:49:28.792837 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/runner.rb:36:in `method_missing'
+E, [2014-03-02T10:49:28.792856 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:29:in `run'
+E, [2014-03-02T10:49:28.792875 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:128:in `run'
+E, [2014-03-02T10:49:28.792894 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:28.792913 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:28.792932 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-03-02T10:49:28.792951 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/bin/thor:6:in `<top (required)>'
+E, [2014-03-02T10:49:28.792970 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/bin/thor:23:in `load'
+E, [2014-03-02T10:49:28.792989 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/bin/thor:23:in `<main>'
+E, [2014-03-02T10:49:28.793008 #41981] ERROR -- default-ubuntu-1204: ----------------------
+I, [2014-03-02T10:49:28.794653 #41981]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+E, [2014-03-02T10:49:32.152177 #41981] ERROR -- default-ubuntu-1204: Destroy failed on instance <default-ubuntu-1204>.
+E, [2014-03-02T10:49:32.152308 #41981] ERROR -- default-ubuntu-1204: ------Exception-------
+E, [2014-03-02T10:49:32.152357 #41981] ERROR -- default-ubuntu-1204: Class: Interrupt
+E, [2014-03-02T10:49:32.152387 #41981] ERROR -- default-ubuntu-1204: Message: 
+E, [2014-03-02T10:49:32.152413 #41981] ERROR -- default-ubuntu-1204: ------Backtrace-------
+E, [2014-03-02T10:49:32.152439 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:233:in `select'
+E, [2014-03-02T10:49:32.152464 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:233:in `attempt_buffer_read'
+E, [2014-03-02T10:49:32.152490 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:61:in `run_command'
+E, [2014-03-02T10:49:32.152519 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout.rb:227:in `run_command'
+E, [2014-03-02T10:49:32.152546 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/shell_out.rb:65:in `run_command'
+E, [2014-03-02T10:49:32.152572 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2014-03-02T10:49:32.152598 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/kitchen-vagrant-0.14.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2014-03-02T10:49:32.152624 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/kitchen-vagrant-0.14.0/lib/kitchen/driver/vagrant.rb:93:in `destroy'
+E, [2014-03-02T10:49:32.152737 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-03-02T10:49:32.152765 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-03-02T10:49:32.152790 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:305:in `call'
+E, [2014-03-02T10:49:32.152817 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:305:in `block in synchronize_or_call'
+E, [2014-03-02T10:49:32.152843 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:303:in `synchronize'
+E, [2014-03-02T10:49:32.152870 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:303:in `synchronize_or_call'
+E, [2014-03-02T10:49:32.152898 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-03-02T10:49:32.152924 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2014-03-02T10:49:32.152951 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2014-03-02T10:49:32.152976 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-03-02T10:49:32.153001 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:268:in `destroy_action'
+E, [2014-03-02T10:49:32.153029 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-03-02T10:49:32.153064 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2014-03-02T10:49:32.153089 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-03-02T10:49:32.153114 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:152:in `destroy'
+E, [2014-03-02T10:49:32.153139 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:176:in `ensure in test'
+E, [2014-03-02T10:49:32.153163 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:176:in `test'
+E, [2014-03-02T10:49:32.153190 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:51:in `block (2 levels) in define'
+E, [2014-03-02T10:49:32.153277 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-03-02T10:49:32.153302 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:32.153325 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:32.153351 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:109:in `invoke'
+E, [2014-03-02T10:49:32.153374 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:57:in `block (2 levels) in define'
+E, [2014-03-02T10:49:32.153400 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/delegate.rb:72:in `each'
+E, [2014-03-02T10:49:32.153425 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/delegate.rb:72:in `method_missing'
+E, [2014-03-02T10:49:32.153451 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/test-kitchen-1.2.1/lib/kitchen/thor_tasks.rb:57:in `block in define'
+E, [2014-03-02T10:49:32.153477 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-03-02T10:49:32.153502 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:32.153527 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:32.153553 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-03-02T10:49:32.153578 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/runner.rb:36:in `method_missing'
+E, [2014-03-02T10:49:32.153602 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:29:in `run'
+E, [2014-03-02T10:49:32.153625 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/command.rb:128:in `run'
+E, [2014-03-02T10:49:32.153650 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-03-02T10:49:32.153685 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-03-02T10:49:32.153712 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-03-02T10:49:32.153738 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/thor-0.18.1/bin/thor:6:in `<top (required)>'
+E, [2014-03-02T10:49:32.153840 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/bin/thor:23:in `load'
+E, [2014-03-02T10:49:32.153866 #41981] ERROR -- default-ubuntu-1204: /Users/st/.rbenv/versions/2.0.0-p247/bin/thor:23:in `<main>'
+E, [2014-03-02T10:49:32.153890 #41981] ERROR -- default-ubuntu-1204: ----------------------
+I, [2014-03-02T11:04:17.523526 #46965]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2014-03-02T11:04:17.533749 #46965]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2014-03-02T11:04:17.534420 #46965]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 3.0.0.beta7...
+I, [2014-03-02T11:27:14.250261 #11897]  INFO -- default-ubuntu-1204: -----> Cleaning up any prior instances of <default-ubuntu-1204>
+I, [2014-03-02T11:27:14.251779 #11897]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+I, [2014-03-02T11:27:23.732155 #11897]  INFO -- default-ubuntu-1204: [default] Destroying VM and associated drives...
+I, [2014-03-02T11:27:24.588391 #11897]  INFO -- default-ubuntu-1204: Vagrant instance <default-ubuntu-1204> destroyed.
+I, [2014-03-02T11:27:24.595431 #11897]  INFO -- default-ubuntu-1204: Finished destroying <default-ubuntu-1204> (0m10.34s).
+I, [2014-03-02T11:27:24.595816 #11897]  INFO -- default-ubuntu-1204: -----> Testing <default-ubuntu-1204>
+I, [2014-03-02T11:27:24.595998 #11897]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2014-03-02T11:27:26.645651 #11897]  INFO -- default-ubuntu-1204: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2014-03-02T11:27:28.857042 #11897]  INFO -- default-ubuntu-1204: [default] Importing base box 'opscode-ubuntu-12.04'...
+Progress: 10%Progress: 30%Progress: 40%Progress: 50%Progress: 60%Progress: 70%Progress: 80%Progress: 90%I, [2014-03-02T11:27:40.466410 #11897]  INFO -- default-ubuntu-1204: [default] Matching MAC address for NAT networking...
+I, [2014-03-02T11:27:41.271501 #11897]  INFO -- default-ubuntu-1204: [default] Setting the name of the VM...
+I, [2014-03-02T11:27:41.306181 #11897]  INFO -- default-ubuntu-1204: [default] Clearing any previously set forwarded ports...
+I, [2014-03-02T11:27:41.373044 #11897]  INFO -- default-ubuntu-1204: [Berkshelf] Skipping Berkshelf with --no-provision
+I, [2014-03-02T11:27:41.857309 #11897]  INFO -- default-ubuntu-1204: [default] Clearing any previously set network interfaces...
+I, [2014-03-02T11:27:41.895799 #11897]  INFO -- default-ubuntu-1204: [default] Preparing network interfaces based on configuration...
+I, [2014-03-02T11:27:41.934498 #11897]  INFO -- default-ubuntu-1204: [default] Forwarding ports...
+I, [2014-03-02T11:27:41.999920 #11897]  INFO -- default-ubuntu-1204: [default] -- 22 => 2222 (adapter 1)
+I, [2014-03-02T11:27:44.208751 #11897]  INFO -- default-ubuntu-1204: [default] Running 'pre-boot' VM customizations...
+I, [2014-03-02T11:27:44.246789 #11897]  INFO -- default-ubuntu-1204: [default] Booting VM...
+[default] Waiting for machine to boot. This may take a few minutes...I, [2014-03-02T11:28:00.566686 #11897]  INFO -- default-ubuntu-1204: [default] Machine booted and ready!
+I, [2014-03-02T11:28:00.596836 #11897]  INFO -- default-ubuntu-1204: [default] Setting hostname...
+I, [2014-03-02T11:28:07.085383 #11897]  INFO -- default-ubuntu-1204: Vagrant instance <default-ubuntu-1204> created.
+I, [2014-03-02T11:28:07.086999 #11897]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (0m42.49s).
+I, [2014-03-02T11:28:07.087181 #11897]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2014-03-02T11:28:07.089068 #11897]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2014-03-02T11:28:07.089437 #11897]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 3.0.0.beta6...

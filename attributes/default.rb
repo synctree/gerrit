@@ -3,6 +3,7 @@
 # Attributes:: default
 #
 # Copyright 2011, Myplanet Digital
+# Copyright 2014, Steffen Gebert / TYPO3 Association
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,7 +21,7 @@
 
 default['gerrit']['flavor'] = "war"
 
-default['gerrit']['version'] = "2.6.1"
+default['gerrit']['version'] = "2.8.1"
 
 default['gerrit']['war']['download_url'] = "http://gerrit-releases.storage.googleapis.com/gerrit-#{node['gerrit']['version']}.war"
 

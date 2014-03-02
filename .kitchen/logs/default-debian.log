@@ -1,0 +1,743 @@
+I, [2014-03-02T11:12:44.616561 #14129]  INFO -- default-debian: -----> Creating <default-debian>...
+I, [2014-03-02T11:12:44.685013 #14129]  INFO -- default-debian: Step 0 : FROM base
+I, [2014-03-02T11:12:44.689374 #14129]  INFO -- default-debian:  ---> b750fe79269d
+I, [2014-03-02T11:12:44.691927 #14129]  INFO -- default-debian: Step 1 : ENV DEBIAN_FRONTEND noninteractive
+I, [2014-03-02T11:12:44.702689 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.703250 #14129]  INFO -- default-debian:  ---> 6f9589c153cb
+I, [2014-03-02T11:12:44.703427 #14129]  INFO -- default-debian: Step 2 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2014-03-02T11:12:44.712020 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.712840 #14129]  INFO -- default-debian:  ---> 9eafceadeea6
+I, [2014-03-02T11:12:44.713399 #14129]  INFO -- default-debian: Step 3 : RUN ln -sf /bin/true /sbin/initctl
+I, [2014-03-02T11:12:44.720663 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.725922 #14129]  INFO -- default-debian:  ---> b767ffb90cff
+I, [2014-03-02T11:12:44.726514 #14129]  INFO -- default-debian: Step 4 : RUN apt-get update
+I, [2014-03-02T11:12:44.740492 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.741267 #14129]  INFO -- default-debian:  ---> c7218f41d728
+I, [2014-03-02T11:12:44.741843 #14129]  INFO -- default-debian: Step 5 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2014-03-02T11:12:44.746315 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.749228 #14129]  INFO -- default-debian:  ---> a0e43617c183
+I, [2014-03-02T11:12:44.749557 #14129]  INFO -- default-debian: Step 6 : RUN mkdir -p /var/run/sshd
+I, [2014-03-02T11:12:44.758419 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.759246 #14129]  INFO -- default-debian:  ---> 8ce08c0d869b
+I, [2014-03-02T11:12:44.760739 #14129]  INFO -- default-debian: Step 7 : RUN useradd -d /home/kitchen -m -s /bin/bash kitchen
+I, [2014-03-02T11:12:44.780447 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.781938 #14129]  INFO -- default-debian:  ---> 70fda7197222
+I, [2014-03-02T11:12:44.782761 #14129]  INFO -- default-debian: Step 8 : RUN echo kitchen:kitchen | chpasswd
+I, [2014-03-02T11:12:44.791619 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.792169 #14129]  INFO -- default-debian:  ---> af9b92a5d56d
+I, [2014-03-02T11:12:44.797939 #14129]  INFO -- default-debian: Step 9 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2014-03-02T11:12:44.804494 #14129]  INFO -- default-debian:  ---> Using cache
+I, [2014-03-02T11:12:44.808859 #14129]  INFO -- default-debian:  ---> a6a6fdf4da40
+I, [2014-03-02T11:12:44.809384 #14129]  INFO -- default-debian: Successfully built a6a6fdf4da40
+I, [2014-03-02T11:12:44.893115 #14129]  INFO -- default-debian: 00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1
+I, [2014-03-02T11:12:45.076630 #14129]  INFO -- default-debian: [{
+I, [2014-03-02T11:12:45.076858 #14129]  INFO -- default-debian:     "ID": "00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1",
+I, [2014-03-02T11:12:45.077094 #14129]  INFO -- default-debian:     "Created": "2014-03-02T11:12:44.865397881Z",
+I, [2014-03-02T11:12:45.077191 #14129]  INFO -- default-debian:     "Path": "/usr/sbin/sshd",
+I, [2014-03-02T11:12:45.082264 #14129]  INFO -- default-debian:     "Args": [
+I, [2014-03-02T11:12:45.084643 #14129]  INFO -- default-debian:  "-D",
+I, [2014-03-02T11:12:45.086745 #14129]  INFO -- default-debian:  "-o",
+I, [2014-03-02T11:12:45.088587 #14129]  INFO -- default-debian:  "UseDNS=no",
+I, [2014-03-02T11:12:45.088845 #14129]  INFO -- default-debian:  "-o",
+I, [2014-03-02T11:12:45.092451 #14129]  INFO -- default-debian:  "UsePAM=no"
+I, [2014-03-02T11:12:45.092689 #14129]  INFO -- default-debian:     ],
+I, [2014-03-02T11:12:45.095044 #14129]  INFO -- default-debian:     "Config": {
+I, [2014-03-02T11:12:45.096409 #14129]  INFO -- default-debian:  "Hostname": "00c2bec6452c",
+I, [2014-03-02T11:12:45.096523 #14129]  INFO -- default-debian:  "Domainname": "",
+I, [2014-03-02T11:12:45.101566 #14129]  INFO -- default-debian:  "User": "",
+I, [2014-03-02T11:12:45.104585 #14129]  INFO -- default-debian:  "Memory": 0,
+I, [2014-03-02T11:12:45.107096 #14129]  INFO -- default-debian:  "MemorySwap": 0,
+I, [2014-03-02T11:12:45.108440 #14129]  INFO -- default-debian:  "CpuShares": 0,
+I, [2014-03-02T11:12:45.108541 #14129]  INFO -- default-debian:  "AttachStdin": false,
+I, [2014-03-02T11:12:45.112529 #14129]  INFO -- default-debian:  "AttachStdout": false,
+I, [2014-03-02T11:12:45.116604 #14129]  INFO -- default-debian:  "AttachStderr": false,
+I, [2014-03-02T11:12:45.116971 #14129]  INFO -- default-debian:  "PortSpecs": null,
+I, [2014-03-02T11:12:45.120450 #14129]  INFO -- default-debian:  "ExposedPorts": {
+I, [2014-03-02T11:12:45.124615 #14129]  INFO -- default-debian:      "22/tcp": {}
+I, [2014-03-02T11:12:45.125870 #14129]  INFO -- default-debian:  },
+I, [2014-03-02T11:12:45.126697 #14129]  INFO -- default-debian:  "Tty": false,
+I, [2014-03-02T11:12:45.128142 #14129]  INFO -- default-debian:  "OpenStdin": false,
+I, [2014-03-02T11:12:45.128563 #14129]  INFO -- default-debian:  "StdinOnce": false,
+I, [2014-03-02T11:12:45.128938 #14129]  INFO -- default-debian:  "Env": [
+I, [2014-03-02T11:12:45.132342 #14129]  INFO -- default-debian:      "HOME=/",
+I, [2014-03-02T11:12:45.133283 #14129]  INFO -- default-debian:      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+I, [2014-03-02T11:12:45.133437 #14129]  INFO -- default-debian:      "DEBIAN_FRONTEND=noninteractive"
+I, [2014-03-02T11:12:45.136582 #14129]  INFO -- default-debian:  ],
+I, [2014-03-02T11:12:45.137419 #14129]  INFO -- default-debian:  "Cmd": [
+I, [2014-03-02T11:12:45.140385 #14129]  INFO -- default-debian:      "/usr/sbin/sshd",
+I, [2014-03-02T11:12:45.140518 #14129]  INFO -- default-debian:      "-D",
+I, [2014-03-02T11:12:45.144591 #14129]  INFO -- default-debian:      "-o",
+I, [2014-03-02T11:12:45.147576 #14129]  INFO -- default-debian:      "UseDNS=no",
+I, [2014-03-02T11:12:45.148395 #14129]  INFO -- default-debian:      "-o",
+I, [2014-03-02T11:12:45.148530 #14129]  INFO -- default-debian:      "UsePAM=no"
+I, [2014-03-02T11:12:45.151472 #14129]  INFO -- default-debian:  ],
+I, [2014-03-02T11:12:45.151742 #14129]  INFO -- default-debian:  "Dns": null,
+I, [2014-03-02T11:12:45.152023 #14129]  INFO -- default-debian:  "Image": "a6a6fdf4da40",
+I, [2014-03-02T11:12:45.152574 #14129]  INFO -- default-debian:  "Volumes": null,
+I, [2014-03-02T11:12:45.154874 #14129]  INFO -- default-debian:  "VolumesFrom": "",
+I, [2014-03-02T11:12:45.156282 #14129]  INFO -- default-debian:  "WorkingDir": "",
+I, [2014-03-02T11:12:45.156841 #14129]  INFO -- default-debian:  "Entrypoint": null,
+I, [2014-03-02T11:12:45.156841 #14129]  INFO -- default-debian:  "NetworkDisabled": false,
+I, [2014-03-02T11:12:45.160227 #14129]  INFO -- default-debian:  "OnBuild": null
+I, [2014-03-02T11:12:45.161282 #14129]  INFO -- default-debian:     },
+I, [2014-03-02T11:12:45.164624 #14129]  INFO -- default-debian:     "State": {
+I, [2014-03-02T11:12:45.166976 #14129]  INFO -- default-debian:  "Running": true,
+I, [2014-03-02T11:12:45.168570 #14129]  INFO -- default-debian:  "Pid": 14182,
+I, [2014-03-02T11:12:45.172586 #14129]  INFO -- default-debian:  "ExitCode": 0,
+I, [2014-03-02T11:12:45.176584 #14129]  INFO -- default-debian:  "StartedAt": "2014-03-02T11:12:44.958720994Z",
+I, [2014-03-02T11:12:45.176948 #14129]  INFO -- default-debian:  "FinishedAt": "0001-01-01T00:00:00Z",
+I, [2014-03-02T11:12:45.180418 #14129]  INFO -- default-debian:  "Ghost": false
+I, [2014-03-02T11:12:45.184579 #14129]  INFO -- default-debian:     },
+I, [2014-03-02T11:12:45.186062 #14129]  INFO -- default-debian:     "Image": "a6a6fdf4da40345f040791fd4339cc40f2b2c03ef747d56d3b46172d6e51bc71",
+I, [2014-03-02T11:12:45.186962 #14129]  INFO -- default-debian:     "NetworkSettings": {
+I, [2014-03-02T11:12:45.188378 #14129]  INFO -- default-debian:  "IPAddress": "172.17.0.4",
+I, [2014-03-02T11:12:45.189384 #14129]  INFO -- default-debian:  "IPPrefixLen": 16,
+I, [2014-03-02T11:12:45.192558 #14129]  INFO -- default-debian:  "Gateway": "172.17.42.1",
+I, [2014-03-02T11:12:45.196543 #14129]  INFO -- default-debian:  "Bridge": "docker0",
+I, [2014-03-02T11:12:45.197116 #14129]  INFO -- default-debian:  "PortMapping": null,
+I, [2014-03-02T11:12:45.197352 #14129]  INFO -- default-debian:  "Ports": {
+I, [2014-03-02T11:12:45.198543 #14129]  INFO -- default-debian:      "22/tcp": [
+I, [2014-03-02T11:12:45.200474 #14129]  INFO -- default-debian:          {
+I, [2014-03-02T11:12:45.200541 #14129]  INFO -- default-debian:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:12:45.204492 #14129]  INFO -- default-debian:              "HostPort": "49155"
+I, [2014-03-02T11:12:45.204557 #14129]  INFO -- default-debian:          }
+I, [2014-03-02T11:12:45.207052 #14129]  INFO -- default-debian:      ]
+I, [2014-03-02T11:12:45.208415 #14129]  INFO -- default-debian:  }
+I, [2014-03-02T11:12:45.208534 #14129]  INFO -- default-debian:     },
+I, [2014-03-02T11:12:45.212553 #14129]  INFO -- default-debian:     "ResolvConfPath": "/etc/resolv.conf",
+I, [2014-03-02T11:12:45.215422 #14129]  INFO -- default-debian:     "HostnamePath": "/var/lib/docker/containers/00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1/hostname",
+I, [2014-03-02T11:12:45.216398 #14129]  INFO -- default-debian:     "HostsPath": "/var/lib/docker/containers/00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1/hosts",
+I, [2014-03-02T11:12:45.216696 #14129]  INFO -- default-debian:     "Name": "/lonely_lumiere",
+I, [2014-03-02T11:12:45.217889 #14129]  INFO -- default-debian:     "Driver": "aufs",
+I, [2014-03-02T11:12:45.220588 #14129]  INFO -- default-debian:     "Volumes": {},
+I, [2014-03-02T11:12:45.224573 #14129]  INFO -- default-debian:     "VolumesRW": {},
+I, [2014-03-02T11:12:45.227071 #14129]  INFO -- default-debian:     "HostConfig": {
+I, [2014-03-02T11:12:45.228417 #14129]  INFO -- default-debian:  "Binds": null,
+I, [2014-03-02T11:12:45.228541 #14129]  INFO -- default-debian:  "ContainerIDFile": "",
+I, [2014-03-02T11:12:45.228664 #14129]  INFO -- default-debian:  "LxcConf": [],
+I, [2014-03-02T11:12:45.228823 #14129]  INFO -- default-debian:  "Privileged": false,
+I, [2014-03-02T11:12:45.229214 #14129]  INFO -- default-debian:  "PortBindings": {
+I, [2014-03-02T11:12:45.229338 #14129]  INFO -- default-debian:      "22/tcp": [
+I, [2014-03-02T11:12:45.229455 #14129]  INFO -- default-debian:          {
+I, [2014-03-02T11:12:45.229576 #14129]  INFO -- default-debian:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:12:45.229742 #14129]  INFO -- default-debian:              "HostPort": "49155"
+I, [2014-03-02T11:12:45.230272 #14129]  INFO -- default-debian:          }
+I, [2014-03-02T11:12:45.230396 #14129]  INFO -- default-debian:      ]
+I, [2014-03-02T11:12:45.230516 #14129]  INFO -- default-debian:  },
+I, [2014-03-02T11:12:45.230636 #14129]  INFO -- default-debian:  "Links": null,
+I, [2014-03-02T11:12:45.230756 #14129]  INFO -- default-debian:  "PublishAllPorts": false
+I, [2014-03-02T11:12:45.230872 #14129]  INFO -- default-debian:     }
+I, [2014-03-02T11:12:45.230995 #14129]  INFO -- default-debian: }]
+I, [2014-03-02T11:12:45.252494 #14129]  INFO -- default-debian: Finished creating <default-debian> (0m0.62s).
+I, [2014-03-02T11:14:05.201298 #14317]  INFO -- default-debian: -----> Destroying <default-debian>...
+I, [2014-03-02T11:14:05.329079 #14317]  INFO -- default-debian: 00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1
+I, [2014-03-02T11:14:05.408377 #14317]  INFO -- default-debian: 00c2bec6452ca4823f3592d97e8cbe53db9d3df4cb0aaca536454c1ba4cd98d1
+I, [2014-03-02T11:14:05.444632 #14317]  INFO -- default-debian: Finished destroying <default-debian> (0m0.20s).
+I, [2014-03-02T11:14:38.168582 #14369]  INFO -- default-debian: -----> Creating <default-debian>...
+I, [2014-03-02T11:14:38.216232 #14369]  INFO -- default-debian: Step 0 : FROM debian
+I, [2014-03-02T11:14:38.220861 #14369]  INFO -- default-debian: Pulling repository debian
+I, [2014-03-02T11:16:46.818433 #14369]  INFO -- default-debian:  ---> b5fe16f2ccba
+I, [2014-03-02T11:16:46.821066 #14369]  INFO -- default-debian: Step 1 : ENV DEBIAN_FRONTEND noninteractive
+I, [2014-03-02T11:16:46.944262 #14369]  INFO -- default-debian:  ---> Running in eda5e015b64e
+I, [2014-03-02T11:16:46.966562 #14369]  INFO -- default-debian:  ---> a94a46ae1805
+I, [2014-03-02T11:16:46.966775 #14369]  INFO -- default-debian: Step 2 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2014-03-02T11:16:47.004515 #14369]  INFO -- default-debian:  ---> Running in 3c15e8690f86
+I, [2014-03-02T11:16:47.282922 #14369]  INFO -- default-debian: Leaving 'local diversion of /sbin/initctl to /sbin/initctl.distrib'
+I, [2014-03-02T11:16:47.355052 #14369]  INFO -- default-debian:  ---> 790280838ce3
+I, [2014-03-02T11:16:47.355727 #14369]  INFO -- default-debian: Step 3 : RUN ln -sf /bin/true /sbin/initctl
+I, [2014-03-02T11:16:47.390069 #14369]  INFO -- default-debian:  ---> Running in 2dfc173d1f80
+I, [2014-03-02T11:16:47.678048 #14369]  INFO -- default-debian:  ---> 6f52d6c06b0a
+I, [2014-03-02T11:16:47.679397 #14369]  INFO -- default-debian: Step 4 : RUN apt-get update
+I, [2014-03-02T11:16:47.737813 #14369]  INFO -- default-debian:  ---> Running in 837cce4dc03b
+I, [2014-03-02T11:16:53.101325 #14369]  INFO -- default-debian: Get:1 http://security.debian.org wheezy/updates Release.gpg [836 B]
+I, [2014-03-02T11:16:53.135051 #14369]  INFO -- default-debian: Get:2 http://security.debian.org wheezy/updates Release [102 kB]
+I, [2014-03-02T11:16:53.285462 #14369]  INFO -- default-debian: Get:3 http://security.debian.org wheezy/updates/main amd64 Packages [161 kB]
+I, [2014-03-02T11:16:58.245010 #14369]  INFO -- default-debian: Get:4 http://http.debian.net wheezy Release.gpg [1672 B]
+I, [2014-03-02T11:16:58.280621 #14369]  INFO -- default-debian: Get:5 http://http.debian.net wheezy-updates Release.gpg [836 B]
+I, [2014-03-02T11:16:58.370908 #14369]  INFO -- default-debian: Get:6 http://http.debian.net wheezy-updates Release [124 kB]
+I, [2014-03-02T11:17:03.415719 #14369]  INFO -- default-debian: Get:7 http://http.debian.net wheezy Release [168 kB]
+I, [2014-03-02T11:17:03.656730 #14369]  INFO -- default-debian: Get:8 http://http.debian.net wheezy-updates/main amd64 Packages/DiffIndex [643 B]
+I, [2014-03-02T11:17:03.677612 #14369]  INFO -- default-debian: Get:9 http://http.debian.net wheezy/main amd64 Packages [5845 kB]
+I, [2014-03-02T11:17:03.750974 #14369]  INFO -- default-debian: Get:10 http://http.debian.net wheezy-updates/main amd64 2014-02-15-1443.31.pdiff [547 B]
+I, [2014-03-02T11:17:03.771154 #14369]  INFO -- default-debian: Get:11 http://http.debian.net wheezy-updates/main amd64 2014-02-15-1443.31.pdiff [547 B]
+I, [2014-03-02T11:17:10.158003 #14369]  INFO -- default-debian: Fetched 6405 kB in 22s (289 kB/s)
+I, [2014-03-02T11:17:10.158342 #14369]  INFO -- default-debian: Reading package lists...
+I, [2014-03-02T11:17:12.221962 #14369]  INFO -- default-debian:  ---> e5aee755be02
+I, [2014-03-02T11:17:12.225897 #14369]  INFO -- default-debian: Step 5 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2014-03-02T11:17:12.257494 #14369]  INFO -- default-debian:  ---> Running in 2b53cf062750
+Reading package lists...Building dependency tree...I, [2014-03-02T11:17:14.408985 #14369]  INFO -- default-debian: The following extra packages will be installed:
+I, [2014-03-02T11:17:14.409532 #14369]  INFO -- default-debian:   adduser ca-certificates file krb5-locales libbsd0 libcurl3 libedit2
+I, [2014-03-02T11:17:14.410012 #14369]  INFO -- default-debian:   libexpat1 libgcrypt11 libgnutls26 libgpg-error0 libgpm2 libgssapi-krb5-2
+I, [2014-03-02T11:17:14.411604 #14369]  INFO -- default-debian:   libidn11 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2
+I, [2014-03-02T11:17:14.412221 #14369]  INFO -- default-debian:   libmagic1 libncursesw5 libp11-kit0 libprocps0 librtmp0 libsasl2-2
+I, [2014-03-02T11:17:14.413227 #14369]  INFO -- default-debian:   libsasl2-modules libsqlite3-0 libssh2-1 libtasn1-3 libwrap0 libx11-6
+I, [2014-03-02T11:17:14.413846 #14369]  INFO -- default-debian:   libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 mime-support
+I, [2014-03-02T11:17:14.414579 #14369]  INFO -- default-debian:   ncurses-term openssh-blacklist openssh-blacklist-extra openssh-client
+I, [2014-03-02T11:17:14.415667 #14369]  INFO -- default-debian:   openssl procps psmisc python python-minimal python2.7 python2.7-minimal tcpd
+I, [2014-03-02T11:17:14.416849 #14369]  INFO -- default-debian:   xauth
+I, [2014-03-02T11:17:14.419260 #14369]  INFO -- default-debian: Suggested packages:
+I, [2014-03-02T11:17:14.422770 #14369]  INFO -- default-debian:   perl-modules rng-tools gpm krb5-doc krb5-user libsasl2-modules-otp
+I, [2014-03-02T11:17:14.424165 #14369]  INFO -- default-debian:   libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit
+I, [2014-03-02T11:17:14.425504 #14369]  INFO -- default-debian:   libsasl2-modules-gssapi-heimdal lsb ssh-askpass libpam-ssh keychain
+I, [2014-03-02T11:17:14.426865 #14369]  INFO -- default-debian:   monkeysphere rssh molly-guard ufw python-doc python-tk python2.7-doc
+I, [2014-03-02T11:17:14.427120 #14369]  INFO -- default-debian:   binutils binfmt-support
+I, [2014-03-02T11:17:14.429465 #14369]  INFO -- default-debian: The following NEW packages will be installed:
+I, [2014-03-02T11:17:14.429733 #14369]  INFO -- default-debian:   adduser ca-certificates curl file krb5-locales libbsd0 libcurl3 libedit2
+I, [2014-03-02T11:17:14.431065 #14369]  INFO -- default-debian:   libexpat1 libgcrypt11 libgnutls26 libgpg-error0 libgpm2 libgssapi-krb5-2
+I, [2014-03-02T11:17:14.431993 #14369]  INFO -- default-debian:   libidn11 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2
+I, [2014-03-02T11:17:14.434180 #14369]  INFO -- default-debian:   libmagic1 libncursesw5 libp11-kit0 libprocps0 librtmp0 libsasl2-2
+I, [2014-03-02T11:17:14.434254 #14369]  INFO -- default-debian:   libsasl2-modules libsqlite3-0 libssh2-1 libtasn1-3 libwrap0 libx11-6
+I, [2014-03-02T11:17:14.436369 #14369]  INFO -- default-debian:   libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 lsb-release
+I, [2014-03-02T11:17:14.437074 #14369]  INFO -- default-debian:   mime-support ncurses-term openssh-blacklist openssh-blacklist-extra
+I, [2014-03-02T11:17:14.440527 #14369]  INFO -- default-debian:   openssh-client openssh-server openssl procps psmisc python python-minimal
+I, [2014-03-02T11:17:14.444609 #14369]  INFO -- default-debian:   python2.7 python2.7-minimal sudo tcpd xauth
+I, [2014-03-02T11:17:19.575323 #14369]  INFO -- default-debian: 0 upgraded, 55 newly installed, 0 to remove and 8 not upgraded.
+I, [2014-03-02T11:17:19.575401 #14369]  INFO -- default-debian: Need to get 20.2 MB of archives.
+I, [2014-03-02T11:17:19.575485 #14369]  INFO -- default-debian: After this operation, 52.5 MB of additional disk space will be used.
+I, [2014-03-02T11:17:19.575916 #14369]  INFO -- default-debian: Get:1 http://security.debian.org/ wheezy/updates/main libgnutls26 amd64 2.12.20-8 [617 kB]
+I, [2014-03-02T11:17:19.872651 #14369]  INFO -- default-debian: Get:2 http://security.debian.org/ wheezy/updates/main libmagic1 amd64 5.11-2+deb7u1 [202 kB]
+I, [2014-03-02T11:17:19.954267 #14369]  INFO -- default-debian: Get:3 http://security.debian.org/ wheezy/updates/main file amd64 5.11-2+deb7u1 [51.9 kB]
+I, [2014-03-02T11:17:24.742751 #14369]  INFO -- default-debian: Get:4 http://http.debian.net/debian/ wheezy/main libgcrypt11 amd64 1.5.0-5+deb7u1 [300 kB]
+I, [2014-03-02T11:17:24.768860 #14369]  INFO -- default-debian: Get:5 http://http.debian.net/debian/ wheezy/main libgpg-error0 amd64 1.10-3.1 [77.9 kB]
+I, [2014-03-02T11:17:24.897915 #14369]  INFO -- default-debian: Get:6 http://http.debian.net/debian/ wheezy/main libtasn1-3 amd64 2.13-2 [67.7 kB]
+I, [2014-03-02T11:17:25.039873 #14369]  INFO -- default-debian: Get:7 http://http.debian.net/debian/ wheezy/main libidn11 amd64 1.25-2 [178 kB]
+I, [2014-03-02T11:17:25.051077 #14369]  INFO -- default-debian: Get:8 http://http.debian.net/debian/ wheezy/main libp11-kit0 amd64 0.12-3 [52.8 kB]
+I, [2014-03-02T11:17:25.120883 #14369]  INFO -- default-debian: Get:9 http://http.debian.net/debian/ wheezy/main libgpm2 amd64 1.20.4-6 [35.8 kB]
+I, [2014-03-02T11:17:25.171599 #14369]  INFO -- default-debian: Get:10 http://http.debian.net/debian/ wheezy/main libkeyutils1 amd64 1.5.5-3 [8552 B]
+I, [2014-03-02T11:17:25.205822 #14369]  INFO -- default-debian: Get:11 http://http.debian.net/debian/ wheezy/main libldap-2.4-2 amd64 2.4.31-1+nmu2 [243 kB]
+I, [2014-03-02T11:17:25.232311 #14369]  INFO -- default-debian: Get:12 http://http.debian.net/debian/ wheezy/main libkrb5support0 amd64 1.10.1+dfsg-5+deb7u1 [49.1 kB]
+I, [2014-03-02T11:17:25.286624 #14369]  INFO -- default-debian: Get:13 http://http.debian.net/debian/ wheezy/main libk5crypto3 amd64 1.10.1+dfsg-5+deb7u1 [112 kB]
+I, [2014-03-02T11:17:25.328340 #14369]  INFO -- default-debian: Get:14 http://http.debian.net/debian/ wheezy/main libsqlite3-0 amd64 3.7.13-1+deb7u1 [455 kB]
+I, [2014-03-02T11:17:25.407082 #14369]  INFO -- default-debian: Get:15 http://http.debian.net/debian/ wheezy/main libsasl2-2 amd64 2.1.25.dfsg1-6+deb7u1 [120 kB]
+I, [2014-03-02T11:17:25.512850 #14369]  INFO -- default-debian: Get:16 http://http.debian.net/debian/ wheezy/main libwrap0 amd64 7.6.q-24 [62.4 kB]
+I, [2014-03-02T11:17:25.526456 #14369]  INFO -- default-debian: Get:17 http://http.debian.net/debian/ wheezy/main librtmp0 amd64 2.4+20111222.git4e06e21-1 [62.3 kB]
+I, [2014-03-02T11:17:25.576671 #14369]  INFO -- default-debian: Get:18 http://http.debian.net/debian/ wheezy/main libexpat1 amd64 2.1.0-1+deb7u1 [139 kB]
+I, [2014-03-02T11:17:25.598315 #14369]  INFO -- default-debian: Get:19 http://http.debian.net/debian/ wheezy/main libxau6 amd64 1:1.0.7-1 [18.8 kB]
+I, [2014-03-02T11:17:25.647940 #14369]  INFO -- default-debian: Get:20 http://http.debian.net/debian/ wheezy/main libxmuu1 amd64 2:1.1.1-1 [23.6 kB]
+I, [2014-03-02T11:17:25.679930 #14369]  INFO -- default-debian: Get:21 http://http.debian.net/debian/ wheezy/main libxdmcp6 amd64 1:1.1.1-1 [26.3 kB]
+I, [2014-03-02T11:17:25.719675 #14369]  INFO -- default-debian: Get:22 http://http.debian.net/debian/ wheezy/main procps amd64 1:3.3.3-3 [252 kB]
+I, [2014-03-02T11:17:25.765164 #14369]  INFO -- default-debian: Get:23 http://http.debian.net/debian/ wheezy/main libxcb1 amd64 1.8.1-2+deb7u1 [50.2 kB]
+I, [2014-03-02T11:17:25.816801 #14369]  INFO -- default-debian: Get:24 http://http.debian.net/debian/ wheezy/main libx11-6 amd64 2:1.5.0-1+deb7u1 [900 kB]
+I, [2014-03-02T11:17:25.838200 #14369]  INFO -- default-debian: Get:25 http://http.debian.net/debian/ wheezy/main mime-support all 3.52-1 [35.5 kB]
+I, [2014-03-02T11:17:25.900166 #14369]  INFO -- default-debian: Get:26 http://http.debian.net/debian/ wheezy/main ncurses-term all 5.9-10 [602 kB]
+I, [2014-03-02T11:17:26.152152 #14369]  INFO -- default-debian: Get:27 http://http.debian.net/debian/ wheezy/main python-minimal all 2.7.3-4+deb7u1 [42.8 kB]
+I, [2014-03-02T11:17:26.161637 #14369]  INFO -- default-debian: Get:28 http://http.debian.net/debian/ wheezy/main libncursesw5 amd64 5.9-10 [141 kB]
+I, [2014-03-02T11:17:26.226120 #14369]  INFO -- default-debian: Get:29 http://http.debian.net/debian/ wheezy/main python all 2.7.3-4+deb7u1 [181 kB]
+I, [2014-03-02T11:17:26.344880 #14369]  INFO -- default-debian: Get:30 http://http.debian.net/debian/ wheezy/main ca-certificates all 20130119 [185 kB]
+I, [2014-03-02T11:17:26.396463 #14369]  INFO -- default-debian: Get:31 http://http.debian.net/debian/ wheezy/main libxext6 amd64 2:1.3.1-2+deb7u1 [54.8 kB]
+I, [2014-03-02T11:17:26.451823 #14369]  INFO -- default-debian: Get:32 http://http.debian.net/debian/ wheezy/main curl amd64 7.26.0-1+wheezy8 [269 kB]
+I, [2014-03-02T11:17:26.510804 #14369]  INFO -- default-debian: Get:33 http://http.debian.net/debian/ wheezy/main adduser all 3.113+nmu3 [264 kB]
+I, [2014-03-02T11:17:26.539173 #14369]  INFO -- default-debian: Get:34 http://http.debian.net/debian/ wheezy/main libprocps0 amd64 1:3.3.3-3 [58.1 kB]
+I, [2014-03-02T11:17:26.599953 #14369]  INFO -- default-debian: Get:35 http://http.debian.net/debian/ wheezy/main libbsd0 amd64 0.4.2-1 [59.3 kB]
+I, [2014-03-02T11:17:26.615457 #14369]  INFO -- default-debian: Get:36 http://http.debian.net/debian/ wheezy/main lsb-release all 4.1+Debian8+deb7u1 [27.2 kB]
+I, [2014-03-02T11:17:26.650075 #14369]  INFO -- default-debian: Get:37 http://http.debian.net/debian/ wheezy/main krb5-locales all 1.10.1+dfsg-5+deb7u1 [1503 kB]
+I, [2014-03-02T11:17:26.682704 #14369]  INFO -- default-debian: Get:38 http://http.debian.net/debian/ wheezy/main openssh-server amd64 1:6.0p1-4 [339 kB]
+I, [2014-03-02T11:17:26.720308 #14369]  INFO -- default-debian: Get:39 http://http.debian.net/debian/ wheezy/main libedit2 amd64 2.11-20080614-5 [72.9 kB]
+I, [2014-03-02T11:17:26.852803 #14369]  INFO -- default-debian: Get:40 http://http.debian.net/debian/ wheezy/main libkrb5-3 amd64 1.10.1+dfsg-5+deb7u1 [394 kB]
+I, [2014-03-02T11:17:26.930585 #14369]  INFO -- default-debian: Get:41 http://http.debian.net/debian/ wheezy/main psmisc amd64 22.19-1+deb7u1 [135 kB]
+I, [2014-03-02T11:17:27.116723 #14369]  INFO -- default-debian: Get:42 http://http.debian.net/debian/ wheezy/main libgssapi-krb5-2 amd64 1.10.1+dfsg-5+deb7u1 [148 kB]
+I, [2014-03-02T11:17:27.226276 #14369]  INFO -- default-debian: Get:43 http://http.debian.net/debian/ wheezy/main libssh2-1 amd64 1.4.2-1.1 [133 kB]
+I, [2014-03-02T11:17:27.343425 #14369]  INFO -- default-debian: Get:44 http://http.debian.net/debian/ wheezy/main libcurl3 amd64 7.26.0-1+wheezy8 [330 kB]
+I, [2014-03-02T11:17:27.364643 #14369]  INFO -- default-debian: Get:45 http://http.debian.net/debian/ wheezy/main tcpd amd64 7.6.q-24 [28.2 kB]
+I, [2014-03-02T11:17:27.470735 #14369]  INFO -- default-debian: Get:46 http://http.debian.net/debian/ wheezy/main openssh-client amd64 1:6.0p1-4 [1025 kB]
+I, [2014-03-02T11:17:27.869582 #14369]  INFO -- default-debian: Get:47 http://http.debian.net/debian/ wheezy/main python2.7-minimal amd64 2.7.3-6 [1783 kB]
+I, [2014-03-02T11:17:28.200115 #14369]  INFO -- default-debian: Get:48 http://http.debian.net/debian/ wheezy/main libx11-data all 2:1.5.0-1+deb7u1 [189 kB]
+I, [2014-03-02T11:17:28.473936 #14369]  INFO -- default-debian: Get:49 http://http.debian.net/debian/ wheezy/main openssh-blacklist all 0.4.1+nmu1 [1835 kB]
+I, [2014-03-02T11:17:28.529895 #14369]  INFO -- default-debian: Get:50 http://http.debian.net/debian/ wheezy/main xauth amd64 1:1.0.7-1 [37.2 kB]
+I, [2014-03-02T11:17:29.021635 #14369]  INFO -- default-debian: Get:51 http://http.debian.net/debian/ wheezy/main openssh-blacklist-extra all 0.4.1+nmu1 [1835 kB]
+I, [2014-03-02T11:17:29.515609 #14369]  INFO -- default-debian: Get:52 http://http.debian.net/debian/ wheezy/main python2.7 amd64 2.7.3-6 [2729 kB]
+I, [2014-03-02T11:17:30.221676 #14369]  INFO -- default-debian: Get:53 http://http.debian.net/debian/ wheezy/main openssl amd64 1.0.1e-2+deb7u4 [700 kB]
+I, [2014-03-02T11:17:30.444562 #14369]  INFO -- default-debian: Get:54 http://http.debian.net/debian/ wheezy/main libsasl2-modules amd64 2.1.25.dfsg1-6+deb7u1 [116 kB]
+I, [2014-03-02T11:17:30.523132 #14369]  INFO -- default-debian: Get:55 http://http.debian.net/debian/ wheezy/main sudo amd64 1.8.5p2-1+nmu1 [842 kB]
+I, [2014-03-02T11:17:31.104984 #14369]  INFO -- default-debian: [91mdebconf: delaying package configuration, since apt-utils is not installed
+I, [2014-03-02T11:17:31.105976 #14369]  INFO -- default-debian: [0m
+I, [2014-03-02T11:17:31.121387 #14369]  INFO -- default-debian: Fetched 20.2 MB in 16s (1243 kB/s)
+I, [2014-03-02T11:17:31.180869 #14369]  INFO -- default-debian: Selecting previously unselected package libgpg-error0:amd64.
+I, [2014-03-02T11:17:31.180944 #14369]  INFO -- default-debian: (Reading database ... 
+I, [2014-03-02T11:17:31.218319 #14369]  INFO -- default-debian: 6730 files and directories currently installed.)
+I, [2014-03-02T11:17:31.219740 #14369]  INFO -- default-debian: Unpacking libgpg-error0:amd64 (from .../libgpg-error0_1.10-3.1_amd64.deb) ...
+I, [2014-03-02T11:17:31.282864 #14369]  INFO -- default-debian: Selecting previously unselected package libgcrypt11:amd64.
+I, [2014-03-02T11:17:31.283454 #14369]  INFO -- default-debian: Unpacking libgcrypt11:amd64 (from .../libgcrypt11_1.5.0-5+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:31.333767 #14369]  INFO -- default-debian: Selecting previously unselected package libp11-kit0:amd64.
+I, [2014-03-02T11:17:31.333863 #14369]  INFO -- default-debian: Unpacking libp11-kit0:amd64 (from .../libp11-kit0_0.12-3_amd64.deb) ...
+I, [2014-03-02T11:17:31.375044 #14369]  INFO -- default-debian: Selecting previously unselected package libtasn1-3:amd64.
+I, [2014-03-02T11:17:31.378004 #14369]  INFO -- default-debian: Unpacking libtasn1-3:amd64 (from .../libtasn1-3_2.13-2_amd64.deb) ...
+I, [2014-03-02T11:17:31.415394 #14369]  INFO -- default-debian: Selecting previously unselected package libgnutls26:amd64.
+I, [2014-03-02T11:17:31.421492 #14369]  INFO -- default-debian: Unpacking libgnutls26:amd64 (from .../libgnutls26_2.12.20-8_amd64.deb) ...
+I, [2014-03-02T11:17:31.500509 #14369]  INFO -- default-debian: Selecting previously unselected package libncursesw5:amd64.
+I, [2014-03-02T11:17:31.501872 #14369]  INFO -- default-debian: Unpacking libncursesw5:amd64 (from .../libncursesw5_5.9-10_amd64.deb) ...
+I, [2014-03-02T11:17:31.550317 #14369]  INFO -- default-debian: Selecting previously unselected package libprocps0:amd64.
+I, [2014-03-02T11:17:31.550395 #14369]  INFO -- default-debian: Unpacking libprocps0:amd64 (from .../libprocps0_1%3a3.3.3-3_amd64.deb) ...
+I, [2014-03-02T11:17:31.586902 #14369]  INFO -- default-debian: Selecting previously unselected package libbsd0:amd64.
+I, [2014-03-02T11:17:31.587671 #14369]  INFO -- default-debian: Unpacking libbsd0:amd64 (from .../libbsd0_0.4.2-1_amd64.deb) ...
+I, [2014-03-02T11:17:31.631035 #14369]  INFO -- default-debian: Selecting previously unselected package libedit2:amd64.
+I, [2014-03-02T11:17:31.632900 #14369]  INFO -- default-debian: Unpacking libedit2:amd64 (from .../libedit2_2.11-20080614-5_amd64.deb) ...
+I, [2014-03-02T11:17:31.677638 #14369]  INFO -- default-debian: Selecting previously unselected package libgpm2:amd64.
+I, [2014-03-02T11:17:31.679388 #14369]  INFO -- default-debian: Unpacking libgpm2:amd64 (from .../libgpm2_1.20.4-6_amd64.deb) ...
+I, [2014-03-02T11:17:31.728264 #14369]  INFO -- default-debian: Selecting previously unselected package libkeyutils1:amd64.
+I, [2014-03-02T11:17:31.728351 #14369]  INFO -- default-debian: Unpacking libkeyutils1:amd64 (from .../libkeyutils1_1.5.5-3_amd64.deb) ...
+I, [2014-03-02T11:17:31.764953 #14369]  INFO -- default-debian: Selecting previously unselected package libkrb5support0:amd64.
+I, [2014-03-02T11:17:31.766773 #14369]  INFO -- default-debian: Unpacking libkrb5support0:amd64 (from .../libkrb5support0_1.10.1+dfsg-5+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:31.806673 #14369]  INFO -- default-debian: Selecting previously unselected package libk5crypto3:amd64.
+I, [2014-03-02T11:17:31.807513 #14369]  INFO -- default-debian: Unpacking libk5crypto3:amd64 (from .../libk5crypto3_1.10.1+dfsg-5+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:31.853679 #14369]  INFO -- default-debian: Selecting previously unselected package libkrb5-3:amd64.
+I, [2014-03-02T11:17:31.854419 #14369]  INFO -- default-debian: Unpacking libkrb5-3:amd64 (from .../libkrb5-3_1.10.1+dfsg-5+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:31.922871 #14369]  INFO -- default-debian: Selecting previously unselected package libgssapi-krb5-2:amd64.
+I, [2014-03-02T11:17:31.922945 #14369]  INFO -- default-debian: Unpacking libgssapi-krb5-2:amd64 (from .../libgssapi-krb5-2_1.10.1+dfsg-5+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:31.965204 #14369]  INFO -- default-debian: Selecting previously unselected package libidn11:amd64.
+I, [2014-03-02T11:17:31.967614 #14369]  INFO -- default-debian: Unpacking libidn11:amd64 (from .../libidn11_1.25-2_amd64.deb) ...
+I, [2014-03-02T11:17:32.018075 #14369]  INFO -- default-debian: Selecting previously unselected package libsasl2-2:amd64.
+I, [2014-03-02T11:17:32.018172 #14369]  INFO -- default-debian: Unpacking libsasl2-2:amd64 (from .../libsasl2-2_2.1.25.dfsg1-6+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.059717 #14369]  INFO -- default-debian: Selecting previously unselected package libldap-2.4-2:amd64.
+I, [2014-03-02T11:17:32.060593 #14369]  INFO -- default-debian: Unpacking libldap-2.4-2:amd64 (from .../libldap-2.4-2_2.4.31-1+nmu2_amd64.deb) ...
+I, [2014-03-02T11:17:32.115740 #14369]  INFO -- default-debian: Selecting previously unselected package libmagic1:amd64.
+I, [2014-03-02T11:17:32.115815 #14369]  INFO -- default-debian: Unpacking libmagic1:amd64 (from .../libmagic1_5.11-2+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.227918 #14369]  INFO -- default-debian: Selecting previously unselected package libsqlite3-0:amd64.
+I, [2014-03-02T11:17:32.227997 #14369]  INFO -- default-debian: Unpacking libsqlite3-0:amd64 (from .../libsqlite3-0_3.7.13-1+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.292025 #14369]  INFO -- default-debian: Selecting previously unselected package libwrap0:amd64.
+I, [2014-03-02T11:17:32.292102 #14369]  INFO -- default-debian: Unpacking libwrap0:amd64 (from .../libwrap0_7.6.q-24_amd64.deb) ...
+I, [2014-03-02T11:17:32.329100 #14369]  INFO -- default-debian: Selecting previously unselected package librtmp0:amd64.
+I, [2014-03-02T11:17:32.330979 #14369]  INFO -- default-debian: Unpacking librtmp0:amd64 (from .../librtmp0_2.4+20111222.git4e06e21-1_amd64.deb) ...
+I, [2014-03-02T11:17:32.377485 #14369]  INFO -- default-debian: Selecting previously unselected package libssh2-1:amd64.
+I, [2014-03-02T11:17:32.377668 #14369]  INFO -- default-debian: Unpacking libssh2-1:amd64 (from .../libssh2-1_1.4.2-1.1_amd64.deb) ...
+I, [2014-03-02T11:17:32.423888 #14369]  INFO -- default-debian: Selecting previously unselected package libcurl3:amd64.
+I, [2014-03-02T11:17:32.423996 #14369]  INFO -- default-debian: Unpacking libcurl3:amd64 (from .../libcurl3_7.26.0-1+wheezy8_amd64.deb) ...
+I, [2014-03-02T11:17:32.476822 #14369]  INFO -- default-debian: Selecting previously unselected package libexpat1:amd64.
+I, [2014-03-02T11:17:32.477018 #14369]  INFO -- default-debian: Unpacking libexpat1:amd64 (from .../libexpat1_2.1.0-1+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.523477 #14369]  INFO -- default-debian: Selecting previously unselected package libxau6:amd64.
+I, [2014-03-02T11:17:32.523557 #14369]  INFO -- default-debian: Unpacking libxau6:amd64 (from .../libxau6_1%3a1.0.7-1_amd64.deb) ...
+I, [2014-03-02T11:17:32.557696 #14369]  INFO -- default-debian: Selecting previously unselected package libxdmcp6:amd64.
+I, [2014-03-02T11:17:32.560495 #14369]  INFO -- default-debian: Unpacking libxdmcp6:amd64 (from .../libxdmcp6_1%3a1.1.1-1_amd64.deb) ...
+I, [2014-03-02T11:17:32.603069 #14369]  INFO -- default-debian: Selecting previously unselected package libxcb1:amd64.
+I, [2014-03-02T11:17:32.603141 #14369]  INFO -- default-debian: Unpacking libxcb1:amd64 (from .../libxcb1_1.8.1-2+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.632868 #14369]  INFO -- default-debian: Selecting previously unselected package libx11-data.
+I, [2014-03-02T11:17:32.634221 #14369]  INFO -- default-debian: Unpacking libx11-data (from .../libx11-data_2%3a1.5.0-1+deb7u1_all.deb) ...
+I, [2014-03-02T11:17:32.913471 #14369]  INFO -- default-debian: Selecting previously unselected package libx11-6:amd64.
+I, [2014-03-02T11:17:32.915584 #14369]  INFO -- default-debian: Unpacking libx11-6:amd64 (from .../libx11-6_2%3a1.5.0-1+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:32.995954 #14369]  INFO -- default-debian: Selecting previously unselected package libxext6:amd64.
+I, [2014-03-02T11:17:32.996926 #14369]  INFO -- default-debian: Unpacking libxext6:amd64 (from .../libxext6_2%3a1.3.1-2+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:33.035443 #14369]  INFO -- default-debian: Selecting previously unselected package libxmuu1:amd64.
+I, [2014-03-02T11:17:33.035525 #14369]  INFO -- default-debian: Unpacking libxmuu1:amd64 (from .../libxmuu1_2%3a1.1.1-1_amd64.deb) ...
+I, [2014-03-02T11:17:33.070994 #14369]  INFO -- default-debian: Selecting previously unselected package openssh-blacklist.
+I, [2014-03-02T11:17:33.071071 #14369]  INFO -- default-debian: Unpacking openssh-blacklist (from .../openssh-blacklist_0.4.1+nmu1_all.deb) ...
+I, [2014-03-02T11:17:33.539275 #14369]  INFO -- default-debian: Selecting previously unselected package openssh-blacklist-extra.
+I, [2014-03-02T11:17:33.540827 #14369]  INFO -- default-debian: Unpacking openssh-blacklist-extra (from .../openssh-blacklist-extra_0.4.1+nmu1_all.deb) ...
+I, [2014-03-02T11:17:34.019781 #14369]  INFO -- default-debian: Selecting previously unselected package adduser.
+I, [2014-03-02T11:17:34.021437 #14369]  INFO -- default-debian: Unpacking adduser (from .../adduser_3.113+nmu3_all.deb) ...
+I, [2014-03-02T11:17:34.160098 #14369]  INFO -- default-debian: Selecting previously unselected package procps.
+I, [2014-03-02T11:17:34.160186 #14369]  INFO -- default-debian: Unpacking procps (from .../procps_1%3a3.3.3-3_amd64.deb) ...
+I, [2014-03-02T11:17:34.240709 #14369]  INFO -- default-debian: Selecting previously unselected package file.
+I, [2014-03-02T11:17:34.240786 #14369]  INFO -- default-debian: Unpacking file (from .../file_5.11-2+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:34.284904 #14369]  INFO -- default-debian: Selecting previously unselected package krb5-locales.
+I, [2014-03-02T11:17:34.286190 #14369]  INFO -- default-debian: Unpacking krb5-locales (from .../krb5-locales_1.10.1+dfsg-5+deb7u1_all.deb) ...
+I, [2014-03-02T11:17:34.351067 #14369]  INFO -- default-debian: Selecting previously unselected package mime-support.
+I, [2014-03-02T11:17:34.352425 #14369]  INFO -- default-debian: Unpacking mime-support (from .../mime-support_3.52-1_all.deb) ...
+I, [2014-03-02T11:17:34.404970 #14369]  INFO -- default-debian: Selecting previously unselected package ncurses-term.
+I, [2014-03-02T11:17:34.405047 #14369]  INFO -- default-debian: Unpacking ncurses-term (from .../ncurses-term_5.9-10_all.deb) ...
+I, [2014-03-02T11:17:35.233110 #14369]  INFO -- default-debian: Selecting previously unselected package openssh-client.
+I, [2014-03-02T11:17:35.235156 #14369]  INFO -- default-debian: Unpacking openssh-client (from .../openssh-client_1%3a6.0p1-4_amd64.deb) ...
+I, [2014-03-02T11:17:35.392056 #14369]  INFO -- default-debian: Selecting previously unselected package python2.7-minimal.
+I, [2014-03-02T11:17:35.392153 #14369]  INFO -- default-debian: Unpacking python2.7-minimal (from .../python2.7-minimal_2.7.3-6_amd64.deb) ...
+I, [2014-03-02T11:17:35.667469 #14369]  INFO -- default-debian: Selecting previously unselected package python2.7.
+I, [2014-03-02T11:17:35.669768 #14369]  INFO -- default-debian: Unpacking python2.7 (from .../python2.7_2.7.3-6_amd64.deb) ...
+I, [2014-03-02T11:17:36.074018 #14369]  INFO -- default-debian: Selecting previously unselected package python-minimal.
+I, [2014-03-02T11:17:36.075689 #14369]  INFO -- default-debian: Unpacking python-minimal (from .../python-minimal_2.7.3-4+deb7u1_all.deb) ...
+I, [2014-03-02T11:17:36.128329 #14369]  INFO -- default-debian: Selecting previously unselected package python.
+I, [2014-03-02T11:17:36.128522 #14369]  INFO -- default-debian: Unpacking python (from .../python_2.7.3-4+deb7u1_all.deb) ...
+I, [2014-03-02T11:17:36.213597 #14369]  INFO -- default-debian: Selecting previously unselected package openssl.
+I, [2014-03-02T11:17:36.215259 #14369]  INFO -- default-debian: Unpacking openssl (from .../openssl_1.0.1e-2+deb7u4_amd64.deb) ...
+I, [2014-03-02T11:17:36.316618 #14369]  INFO -- default-debian: Selecting previously unselected package ca-certificates.
+I, [2014-03-02T11:17:36.320859 #14369]  INFO -- default-debian: Unpacking ca-certificates (from .../ca-certificates_20130119_all.deb) ...
+I, [2014-03-02T11:17:36.424039 #14369]  INFO -- default-debian: Selecting previously unselected package curl.
+I, [2014-03-02T11:17:36.424114 #14369]  INFO -- default-debian: Unpacking curl (from .../curl_7.26.0-1+wheezy8_amd64.deb) ...
+I, [2014-03-02T11:17:36.471751 #14369]  INFO -- default-debian: Selecting previously unselected package libsasl2-modules:amd64.
+I, [2014-03-02T11:17:36.474124 #14369]  INFO -- default-debian: Unpacking libsasl2-modules:amd64 (from .../libsasl2-modules_2.1.25.dfsg1-6+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:36.521883 #14369]  INFO -- default-debian: Selecting previously unselected package lsb-release.
+I, [2014-03-02T11:17:36.521959 #14369]  INFO -- default-debian: Unpacking lsb-release (from .../lsb-release_4.1+Debian8+deb7u1_all.deb) ...
+I, [2014-03-02T11:17:36.578733 #14369]  INFO -- default-debian: Selecting previously unselected package openssh-server.
+I, [2014-03-02T11:17:36.578825 #14369]  INFO -- default-debian: Unpacking openssh-server (from .../openssh-server_1%3a6.0p1-4_amd64.deb) ...
+I, [2014-03-02T11:17:37.000914 #14369]  INFO -- default-debian: Selecting previously unselected package psmisc.
+I, [2014-03-02T11:17:37.001572 #14369]  INFO -- default-debian: Unpacking psmisc (from .../psmisc_22.19-1+deb7u1_amd64.deb) ...
+I, [2014-03-02T11:17:37.111764 #14369]  INFO -- default-debian: Selecting previously unselected package sudo.
+I, [2014-03-02T11:17:37.112668 #14369]  INFO -- default-debian: Unpacking sudo (from .../sudo_1.8.5p2-1+nmu1_amd64.deb) ...
+I, [2014-03-02T11:17:37.259490 #14369]  INFO -- default-debian: Selecting previously unselected package tcpd.
+I, [2014-03-02T11:17:37.260302 #14369]  INFO -- default-debian: Unpacking tcpd (from .../tcpd_7.6.q-24_amd64.deb) ...
+I, [2014-03-02T11:17:37.295357 #14369]  INFO -- default-debian: Selecting previously unselected package xauth.
+I, [2014-03-02T11:17:37.297996 #14369]  INFO -- default-debian: Unpacking xauth (from .../xauth_1%3a1.0.7-1_amd64.deb) ...
+I, [2014-03-02T11:17:37.362054 #14369]  INFO -- default-debian: Setting up libgpg-error0:amd64 (1.10-3.1) ...
+I, [2014-03-02T11:17:37.500344 #14369]  INFO -- default-debian: Setting up libgcrypt11:amd64 (1.5.0-5+deb7u1) ...
+I, [2014-03-02T11:17:37.518680 #14369]  INFO -- default-debian: Setting up libp11-kit0:amd64 (0.12-3) ...
+I, [2014-03-02T11:17:37.533338 #14369]  INFO -- default-debian: Setting up libtasn1-3:amd64 (2.13-2) ...
+I, [2014-03-02T11:17:37.553929 #14369]  INFO -- default-debian: Setting up libgnutls26:amd64 (2.12.20-8) ...
+I, [2014-03-02T11:17:37.569338 #14369]  INFO -- default-debian: Setting up libncursesw5:amd64 (5.9-10) ...
+I, [2014-03-02T11:17:37.588073 #14369]  INFO -- default-debian: Setting up libprocps0:amd64 (1:3.3.3-3) ...
+I, [2014-03-02T11:17:37.610278 #14369]  INFO -- default-debian: Setting up libbsd0:amd64 (0.4.2-1) ...
+I, [2014-03-02T11:17:37.624730 #14369]  INFO -- default-debian: Setting up libedit2:amd64 (2.11-20080614-5) ...
+I, [2014-03-02T11:17:37.641996 #14369]  INFO -- default-debian: Setting up libgpm2:amd64 (1.20.4-6) ...
+I, [2014-03-02T11:17:37.659792 #14369]  INFO -- default-debian: Setting up libkeyutils1:amd64 (1.5.5-3) ...
+I, [2014-03-02T11:17:37.679457 #14369]  INFO -- default-debian: Setting up libkrb5support0:amd64 (1.10.1+dfsg-5+deb7u1) ...
+I, [2014-03-02T11:17:37.704713 #14369]  INFO -- default-debian: Setting up libk5crypto3:amd64 (1.10.1+dfsg-5+deb7u1) ...
+I, [2014-03-02T11:17:37.722095 #14369]  INFO -- default-debian: Setting up libkrb5-3:amd64 (1.10.1+dfsg-5+deb7u1) ...
+I, [2014-03-02T11:17:37.740143 #14369]  INFO -- default-debian: Setting up libgssapi-krb5-2:amd64 (1.10.1+dfsg-5+deb7u1) ...
+I, [2014-03-02T11:17:37.761717 #14369]  INFO -- default-debian: Setting up libidn11:amd64 (1.25-2) ...
+I, [2014-03-02T11:17:37.785765 #14369]  INFO -- default-debian: Setting up libsasl2-2:amd64 (2.1.25.dfsg1-6+deb7u1) ...
+I, [2014-03-02T11:17:37.800197 #14369]  INFO -- default-debian: Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2) ...
+I, [2014-03-02T11:17:37.819963 #14369]  INFO -- default-debian: Setting up libmagic1:amd64 (5.11-2+deb7u1) ...
+I, [2014-03-02T11:17:37.846590 #14369]  INFO -- default-debian: Setting up libsqlite3-0:amd64 (3.7.13-1+deb7u1) ...
+I, [2014-03-02T11:17:37.872831 #14369]  INFO -- default-debian: Setting up libwrap0:amd64 (7.6.q-24) ...
+I, [2014-03-02T11:17:37.896091 #14369]  INFO -- default-debian: Setting up librtmp0:amd64 (2.4+20111222.git4e06e21-1) ...
+I, [2014-03-02T11:17:37.915675 #14369]  INFO -- default-debian: Setting up libssh2-1:amd64 (1.4.2-1.1) ...
+I, [2014-03-02T11:17:37.930581 #14369]  INFO -- default-debian: Setting up libcurl3:amd64 (7.26.0-1+wheezy8) ...
+I, [2014-03-02T11:17:37.950009 #14369]  INFO -- default-debian: Setting up libexpat1:amd64 (2.1.0-1+deb7u1) ...
+I, [2014-03-02T11:17:37.971614 #14369]  INFO -- default-debian: Setting up libxau6:amd64 (1:1.0.7-1) ...
+I, [2014-03-02T11:17:37.987030 #14369]  INFO -- default-debian: Setting up libxdmcp6:amd64 (1:1.1.1-1) ...
+I, [2014-03-02T11:17:38.009513 #14369]  INFO -- default-debian: Setting up libxcb1:amd64 (1.8.1-2+deb7u1) ...
+I, [2014-03-02T11:17:38.026403 #14369]  INFO -- default-debian: Setting up libx11-data (2:1.5.0-1+deb7u1) ...
+I, [2014-03-02T11:17:38.035269 #14369]  INFO -- default-debian: Setting up libx11-6:amd64 (2:1.5.0-1+deb7u1) ...
+I, [2014-03-02T11:17:38.050844 #14369]  INFO -- default-debian: Setting up libxext6:amd64 (2:1.3.1-2+deb7u1) ...
+I, [2014-03-02T11:17:38.072585 #14369]  INFO -- default-debian: Setting up libxmuu1:amd64 (2:1.1.1-1) ...
+I, [2014-03-02T11:17:38.086440 #14369]  INFO -- default-debian: Setting up openssh-blacklist (0.4.1+nmu1) ...
+I, [2014-03-02T11:17:38.093830 #14369]  INFO -- default-debian: Setting up openssh-blacklist-extra (0.4.1+nmu1) ...
+I, [2014-03-02T11:17:38.105429 #14369]  INFO -- default-debian: Setting up adduser (3.113+nmu3) ...
+I, [2014-03-02T11:17:38.812086 #14369]  INFO -- default-debian: Setting up procps (1:3.3.3-3) ...
+I, [2014-03-02T11:17:38.857935 #14369]  INFO -- default-debian: update-alternatives: using /usr/bin/w.procps to provide /usr/bin/w (w) in auto mode
+I, [2014-03-02T11:17:38.994657 #14369]  INFO -- default-debian: [91minvoke-rc.d: policy-rc.d denied execution of start.
+I, [2014-03-02T11:17:38.994804 #14369]  INFO -- default-debian: [0m
+I, [2014-03-02T11:17:39.000018 #14369]  INFO -- default-debian: Setting up file (5.11-2+deb7u1) ...
+I, [2014-03-02T11:17:39.006321 #14369]  INFO -- default-debian: Setting up krb5-locales (1.10.1+dfsg-5+deb7u1) ...
+I, [2014-03-02T11:17:39.016592 #14369]  INFO -- default-debian: Setting up mime-support (3.52-1) ...
+update-alternatives: using /usr/bin/see to provide /usr/bin/view (view) in auto modeI, [2014-03-02T11:17:39.066688 #14369]  INFO -- default-debian: Setting up ncurses-term (5.9-10) ...
+I, [2014-03-02T11:17:39.075119 #14369]  INFO -- default-debian: Setting up openssh-client (1:6.0p1-4) ...
+I, [2014-03-02T11:17:39.414954 #14369]  INFO -- default-debian: Setting up python2.7-minimal (2.7.3-6) ...
+I, [2014-03-02T11:17:41.290303 #14369]  INFO -- default-debian: Setting up python2.7 (2.7.3-6) ...
+I, [2014-03-02T11:17:45.017902 #14369]  INFO -- default-debian: Setting up python-minimal (2.7.3-4+deb7u1) ...
+I, [2014-03-02T11:17:45.076000 #14369]  INFO -- default-debian: Setting up python (2.7.3-4+deb7u1) ...
+I, [2014-03-02T11:17:45.093469 #14369]  INFO -- default-debian: Setting up openssl (1.0.1e-2+deb7u4) ...
+I, [2014-03-02T11:17:45.109336 #14369]  INFO -- default-debian: Setting up ca-certificates (20130119) ...
+I, [2014-03-02T11:17:46.175248 #14369]  INFO -- default-debian: Setting up curl (7.26.0-1+wheezy8) ...
+I, [2014-03-02T11:17:46.180581 #14369]  INFO -- default-debian: Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-6+deb7u1) ...
+I, [2014-03-02T11:17:46.187362 #14369]  INFO -- default-debian: Setting up lsb-release (4.1+Debian8+deb7u1) ...
+I, [2014-03-02T11:17:46.335382 #14369]  INFO -- default-debian: Setting up openssh-server (1:6.0p1-4) ...
+[91mCreating SSH2 RSA key; this may take some time ...[0mI, [2014-03-02T11:17:47.074929 #14369]  INFO -- default-debian: [91m
+I, [2014-03-02T11:17:47.075001 #14369]  INFO -- default-debian: [0m
+[91mCreating SSH2 DSA key; this may take some time ...[0mI, [2014-03-02T11:17:47.329808 #14369]  INFO -- default-debian: [91m
+I, [2014-03-02T11:17:47.329900 #14369]  INFO -- default-debian: [0m
+[91mCreating SSH2 ECDSA key; this may take some time ...[0mI, [2014-03-02T11:17:47.341844 #14369]  INFO -- default-debian: [91m
+I, [2014-03-02T11:17:47.341921 #14369]  INFO -- default-debian: [0m
+I, [2014-03-02T11:17:47.591892 #14369]  INFO -- default-debian: [91minvoke-rc.d: policy-rc.d denied execution of restart.
+I, [2014-03-02T11:17:47.592564 #14369]  INFO -- default-debian: [0m
+I, [2014-03-02T11:17:47.626098 #14369]  INFO -- default-debian: Setting up psmisc (22.19-1+deb7u1) ...
+I, [2014-03-02T11:17:47.640718 #14369]  INFO -- default-debian: Setting up sudo (1.8.5p2-1+nmu1) ...
+I, [2014-03-02T11:17:47.777507 #14369]  INFO -- default-debian: Setting up tcpd (7.6.q-24) ...
+I, [2014-03-02T11:17:47.791196 #14369]  INFO -- default-debian: Setting up xauth (1:1.0.7-1) ...
+I, [2014-03-02T11:17:47.800702 #14369]  INFO -- default-debian: Processing triggers for ca-certificates ...
+Updating certificates in /etc/ssl/certs... I, [2014-03-02T11:17:53.012965 #14369]  INFO -- default-debian: 158 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d....I, [2014-03-02T11:17:53.019018 #14369]  INFO -- default-debian: done.
+I, [2014-03-02T11:18:04.305400 #14369]  INFO -- default-debian:  ---> cb287d56b102
+I, [2014-03-02T11:18:04.306470 #14369]  INFO -- default-debian: Step 6 : RUN mkdir -p /var/run/sshd
+I, [2014-03-02T11:18:04.513944 #14369]  INFO -- default-debian:  ---> Running in a8c3f0424525
+I, [2014-03-02T11:18:04.833160 #14369]  INFO -- default-debian:  ---> 95b49f7c8b51
+I, [2014-03-02T11:18:04.833933 #14369]  INFO -- default-debian: Step 7 : RUN useradd -d /home/kitchen -m -s /bin/bash kitchen
+I, [2014-03-02T11:18:04.884120 #14369]  INFO -- default-debian:  ---> Running in e9eb2aa14d97
+I, [2014-03-02T11:18:05.205761 #14369]  INFO -- default-debian:  ---> 707ad91a3682
+I, [2014-03-02T11:18:05.208737 #14369]  INFO -- default-debian: Step 8 : RUN echo kitchen:kitchen | chpasswd
+I, [2014-03-02T11:18:05.247763 #14369]  INFO -- default-debian:  ---> Running in 95f8af437b98
+I, [2014-03-02T11:18:05.553072 #14369]  INFO -- default-debian:  ---> 1a8e8af2a701
+I, [2014-03-02T11:18:05.553564 #14369]  INFO -- default-debian: Step 9 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2014-03-02T11:18:05.591762 #14369]  INFO -- default-debian:  ---> Running in 1f7ed7f5e2ae
+I, [2014-03-02T11:18:05.883347 #14369]  INFO -- default-debian:  ---> a570ad542e7a
+I, [2014-03-02T11:18:05.887218 #14369]  INFO -- default-debian: Successfully built a570ad542e7a
+I, [2014-03-02T11:18:06.135223 #14369]  INFO -- default-debian: a1082544b91900904c2b73327f244e0190000713dbd782349560fd3c4ee6c0df
+I, [2014-03-02T11:18:06.342463 #14369]  INFO -- default-debian: [{
+I, [2014-03-02T11:18:06.342839 #14369]  INFO -- default-debian:     "ID": "a1082544b91900904c2b73327f244e0190000713dbd782349560fd3c4ee6c0df",
+I, [2014-03-02T11:18:06.343011 #14369]  INFO -- default-debian:     "Created": "2014-03-02T11:18:06.119914055Z",
+I, [2014-03-02T11:18:06.343084 #14369]  INFO -- default-debian:     "Path": "/usr/sbin/sshd",
+I, [2014-03-02T11:18:06.343218 #14369]  INFO -- default-debian:     "Args": [
+I, [2014-03-02T11:18:06.351657 #14369]  INFO -- default-debian:  "-D",
+I, [2014-03-02T11:18:06.352420 #14369]  INFO -- default-debian:  "-o",
+I, [2014-03-02T11:18:06.352968 #14369]  INFO -- default-debian:  "UseDNS=no",
+I, [2014-03-02T11:18:06.356573 #14369]  INFO -- default-debian:  "-o",
+I, [2014-03-02T11:18:06.356792 #14369]  INFO -- default-debian:  "UsePAM=no"
+I, [2014-03-02T11:18:06.358996 #14369]  INFO -- default-debian:     ],
+I, [2014-03-02T11:18:06.359401 #14369]  INFO -- default-debian:     "Config": {
+I, [2014-03-02T11:18:06.359912 #14369]  INFO -- default-debian:  "Hostname": "a1082544b919",
+I, [2014-03-02T11:18:06.360421 #14369]  INFO -- default-debian:  "Domainname": "",
+I, [2014-03-02T11:18:06.361261 #14369]  INFO -- default-debian:  "User": "",
+I, [2014-03-02T11:18:06.361514 #14369]  INFO -- default-debian:  "Memory": 0,
+I, [2014-03-02T11:18:06.361680 #14369]  INFO -- default-debian:  "MemorySwap": 0,
+I, [2014-03-02T11:18:06.361809 #14369]  INFO -- default-debian:  "CpuShares": 0,
+I, [2014-03-02T11:18:06.361935 #14369]  INFO -- default-debian:  "AttachStdin": false,
+I, [2014-03-02T11:18:06.362094 #14369]  INFO -- default-debian:  "AttachStdout": false,
+I, [2014-03-02T11:18:06.362594 #14369]  INFO -- default-debian:  "AttachStderr": false,
+I, [2014-03-02T11:18:06.363085 #14369]  INFO -- default-debian:  "PortSpecs": null,
+I, [2014-03-02T11:18:06.363484 #14369]  INFO -- default-debian:  "ExposedPorts": {
+I, [2014-03-02T11:18:06.363606 #14369]  INFO -- default-debian:      "22/tcp": {}
+I, [2014-03-02T11:18:06.363726 #14369]  INFO -- default-debian:  },
+I, [2014-03-02T11:18:06.363843 #14369]  INFO -- default-debian:  "Tty": false,
+I, [2014-03-02T11:18:06.363968 #14369]  INFO -- default-debian:  "OpenStdin": false,
+I, [2014-03-02T11:18:06.364097 #14369]  INFO -- default-debian:  "StdinOnce": false,
+I, [2014-03-02T11:18:06.364224 #14369]  INFO -- default-debian:  "Env": [
+I, [2014-03-02T11:18:06.364347 #14369]  INFO -- default-debian:      "HOME=/",
+I, [2014-03-02T11:18:06.364495 #14369]  INFO -- default-debian:      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+I, [2014-03-02T11:18:06.364629 #14369]  INFO -- default-debian:      "DEBIAN_FRONTEND=noninteractive"
+I, [2014-03-02T11:18:06.364753 #14369]  INFO -- default-debian:  ],
+I, [2014-03-02T11:18:06.364870 #14369]  INFO -- default-debian:  "Cmd": [
+I, [2014-03-02T11:18:06.364998 #14369]  INFO -- default-debian:      "/usr/sbin/sshd",
+I, [2014-03-02T11:18:06.365124 #14369]  INFO -- default-debian:      "-D",
+I, [2014-03-02T11:18:06.365248 #14369]  INFO -- default-debian:      "-o",
+I, [2014-03-02T11:18:06.365369 #14369]  INFO -- default-debian:      "UseDNS=no",
+I, [2014-03-02T11:18:06.365497 #14369]  INFO -- default-debian:      "-o",
+I, [2014-03-02T11:18:06.365625 #14369]  INFO -- default-debian:      "UsePAM=no"
+I, [2014-03-02T11:18:06.365751 #14369]  INFO -- default-debian:  ],
+I, [2014-03-02T11:18:06.365871 #14369]  INFO -- default-debian:  "Dns": null,
+I, [2014-03-02T11:18:06.365987 #14369]  INFO -- default-debian:  "Image": "a570ad542e7a",
+I, [2014-03-02T11:18:06.368587 #14369]  INFO -- default-debian:  "Volumes": null,
+I, [2014-03-02T11:18:06.370800 #14369]  INFO -- default-debian:  "VolumesFrom": "",
+I, [2014-03-02T11:18:06.371014 #14369]  INFO -- default-debian:  "WorkingDir": "",
+I, [2014-03-02T11:18:06.371163 #14369]  INFO -- default-debian:  "Entrypoint": null,
+I, [2014-03-02T11:18:06.372556 #14369]  INFO -- default-debian:  "NetworkDisabled": false,
+I, [2014-03-02T11:18:06.374000 #14369]  INFO -- default-debian:  "OnBuild": null
+I, [2014-03-02T11:18:06.376619 #14369]  INFO -- default-debian:     },
+I, [2014-03-02T11:18:06.380622 #14369]  INFO -- default-debian:     "State": {
+I, [2014-03-02T11:18:06.383832 #14369]  INFO -- default-debian:  "Running": true,
+I, [2014-03-02T11:18:06.384521 #14369]  INFO -- default-debian:  "Pid": 18476,
+I, [2014-03-02T11:18:06.388537 #14369]  INFO -- default-debian:  "ExitCode": 0,
+I, [2014-03-02T11:18:06.392529 #14369]  INFO -- default-debian:  "StartedAt": "2014-03-02T11:18:06.208955341Z",
+I, [2014-03-02T11:18:06.393246 #14369]  INFO -- default-debian:  "FinishedAt": "0001-01-01T00:00:00Z",
+I, [2014-03-02T11:18:06.396394 #14369]  INFO -- default-debian:  "Ghost": false
+I, [2014-03-02T11:18:06.397297 #14369]  INFO -- default-debian:     },
+I, [2014-03-02T11:18:06.400588 #14369]  INFO -- default-debian:     "Image": "a570ad542e7a7e41fe73a3df92cb690f2dc37b44872e02f8f1db1966ec95aa39",
+I, [2014-03-02T11:18:06.401475 #14369]  INFO -- default-debian:     "NetworkSettings": {
+I, [2014-03-02T11:18:06.403748 #14369]  INFO -- default-debian:  "IPAddress": "172.17.0.4",
+I, [2014-03-02T11:18:06.404413 #14369]  INFO -- default-debian:  "IPPrefixLen": 16,
+I, [2014-03-02T11:18:06.404525 #14369]  INFO -- default-debian:  "Gateway": "172.17.42.1",
+I, [2014-03-02T11:18:06.404648 #14369]  INFO -- default-debian:  "Bridge": "docker0",
+I, [2014-03-02T11:18:06.404767 #14369]  INFO -- default-debian:  "PortMapping": null,
+I, [2014-03-02T11:18:06.404883 #14369]  INFO -- default-debian:  "Ports": {
+I, [2014-03-02T11:18:06.405006 #14369]  INFO -- default-debian:      "22/tcp": [
+I, [2014-03-02T11:18:06.405128 #14369]  INFO -- default-debian:          {
+I, [2014-03-02T11:18:06.405249 #14369]  INFO -- default-debian:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:18:06.405367 #14369]  INFO -- default-debian:              "HostPort": "49156"
+I, [2014-03-02T11:18:06.408532 #14369]  INFO -- default-debian:          }
+I, [2014-03-02T11:18:06.409825 #14369]  INFO -- default-debian:      ]
+I, [2014-03-02T11:18:06.412550 #14369]  INFO -- default-debian:  }
+I, [2014-03-02T11:18:06.414212 #14369]  INFO -- default-debian:     },
+I, [2014-03-02T11:18:06.416478 #14369]  INFO -- default-debian:     "ResolvConfPath": "/etc/resolv.conf",
+I, [2014-03-02T11:18:06.420017 #14369]  INFO -- default-debian:     "HostnamePath": "/var/lib/docker/containers/a1082544b91900904c2b73327f244e0190000713dbd782349560fd3c4ee6c0df/hostname",
+I, [2014-03-02T11:18:06.420618 #14369]  INFO -- default-debian:     "HostsPath": "/var/lib/docker/containers/a1082544b91900904c2b73327f244e0190000713dbd782349560fd3c4ee6c0df/hosts",
+I, [2014-03-02T11:18:06.424008 #14369]  INFO -- default-debian:     "Name": "/elegant_bell",
+I, [2014-03-02T11:18:06.425412 #14369]  INFO -- default-debian:     "Driver": "aufs",
+I, [2014-03-02T11:18:06.428585 #14369]  INFO -- default-debian:     "Volumes": {},
+I, [2014-03-02T11:18:06.432453 #14369]  INFO -- default-debian:     "VolumesRW": {},
+I, [2014-03-02T11:18:06.432548 #14369]  INFO -- default-debian:     "HostConfig": {
+I, [2014-03-02T11:18:06.434754 #14369]  INFO -- default-debian:  "Binds": null,
+I, [2014-03-02T11:18:06.436454 #14369]  INFO -- default-debian:  "ContainerIDFile": "",
+I, [2014-03-02T11:18:06.436546 #14369]  INFO -- default-debian:  "LxcConf": [],
+I, [2014-03-02T11:18:06.440347 #14369]  INFO -- default-debian:  "Privileged": false,
+I, [2014-03-02T11:18:06.441385 #14369]  INFO -- default-debian:  "PortBindings": {
+I, [2014-03-02T11:18:06.444481 #14369]  INFO -- default-debian:      "22/tcp": [
+I, [2014-03-02T11:18:06.444563 #14369]  INFO -- default-debian:          {
+I, [2014-03-02T11:18:06.444714 #14369]  INFO -- default-debian:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:18:06.444835 #14369]  INFO -- default-debian:              "HostPort": "49156"
+I, [2014-03-02T11:18:06.444968 #14369]  INFO -- default-debian:          }
+I, [2014-03-02T11:18:06.445108 #14369]  INFO -- default-debian:      ]
+I, [2014-03-02T11:18:06.448501 #14369]  INFO -- default-debian:  },
+I, [2014-03-02T11:18:06.448584 #14369]  INFO -- default-debian:  "Links": null,
+I, [2014-03-02T11:18:06.452305 #14369]  INFO -- default-debian:  "PublishAllPorts": false
+I, [2014-03-02T11:18:06.453315 #14369]  INFO -- default-debian:     }
+I, [2014-03-02T11:18:06.454797 #14369]  INFO -- default-debian: }]
+I, [2014-03-02T11:18:06.592644 #14369]  INFO -- default-debian: Finished creating <default-debian> (3m28.32s).
+I, [2014-03-02T11:18:32.628531 #18556]  INFO -- default-debian: -----> Converging <default-debian>...
+I, [2014-03-02T11:18:32.645919 #18556]  INFO -- default-debian: Preparing files for transfer
+I, [2014-03-02T11:18:32.653357 #18556]  INFO -- default-debian: Resolving cookbook dependencies with Berkshelf 3.0.0.beta7...
+-----> Converging <default-debian>...
+Preparing files for transfer
+Resolving cookbook dependencies with Berkshelf 2.0.14...
+Removing non-cookbook files before transfer
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+-----> Installing Chef Omnibus (true)
+downloading https://www.getchef.com/chef/install.sh
+  to file /tmp/install.sh
+trying curl...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                          Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0100 13347  100 13347    0     0   2157      0  0:00:06  0:00:06 --:--:-- 15098
+Downloading Chef  for debian...
+downloading https://www.getchef.com/chef/metadata?v=&prerelease=false&p=debian&pv=6&m=x86_64
+  to file /tmp/install.sh.22/metadata.txt
+trying curl...
+url	https://opscode-omnibus-packages.s3.amazonaws.com/debian/6/x86_64/chef_11.10.4-1.debian.6.0.5_amd64.deb
+md5	3dde48f0d4d46636c7b8dacdca16c928
+sha256	eaa5a8615723b502f8d107e9c3fc6a601796631e96559f0845cfd24df4a6f5fe
+downloaded metadata file looks valid...
+downloading https://opscode-omnibus-packages.s3.amazonaws.com/debian/6/x86_64/chef_11.10.4-1.debian.6.0.5_amd64.deb
+  to file /tmp/install.sh.22/chef_11.10.4-1.debian.6.0.5_amd64.deb
+
+trying curl...
+Checksum compare with sha256sum succeeded.
+Installing Chef 
+installing with dpkg...
+Selecting previously unselected package chef.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11489 files and directories currently installed.)
+Unpacking chef (from .../chef_11.10.4-1.debian.6.0.5_amd64.deb) ...
+Setting up chef (11.10.4-1.debian.6.0.5) ...
+Thank you for installing Chef!
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Transfering files to <default-debian>
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+[2014-03-02T11:49:47+00:00] INFO: Forking chef instance to converge...
+Starting Chef Client, version 11.10.4[0m
+[2014-03-02T11:49:47+00:00] INFO: *** Chef 11.10.4 ***
+[2014-03-02T11:49:47+00:00] INFO: Chef-client pid: 96
+[2014-03-02T11:49:47+00:00] INFO: Setting the run_list to ["recipe[apt]", "recipe[gerrit::default]"] from JSON
+[2014-03-02T11:49:47+00:00] INFO: Run List is [recipe[apt], recipe[gerrit::default]]
+[2014-03-02T11:49:47+00:00] INFO: Run List expands to [apt, gerrit::default]
+[2014-03-02T11:49:47+00:00] INFO: Starting Chef Run for default-debian
+[2014-03-02T11:49:47+00:00] INFO: Running start handlers
+[2014-03-02T11:49:47+00:00] INFO: Start handlers complete.
+Compiling Cookbooks...[0m
+[2014-03-02T11:49:48+00:00] WARN: Cloning resource attributes for directory[/var/cache/local/preseeding] from prior resource (CHEF-3694)
+[2014-03-02T11:49:48+00:00] WARN: Previous directory[/var/cache/local/preseeding]: /tmp/kitchen/cookbooks/apt/recipes/default.rb:75:in `block in from_file'
+[2014-03-02T11:49:48+00:00] WARN: Current  directory[/var/cache/local/preseeding]: /tmp/kitchen/cookbooks/mysql/recipes/_server_debian.rb:4:in `from_file'
+[2014-03-02T11:49:48+00:00] WARN: Cloning resource attributes for directory[/var/lib/mysql] from prior resource (CHEF-3694)
+[2014-03-02T11:49:48+00:00] WARN: Previous directory[/var/lib/mysql]: /tmp/kitchen/cookbooks/mysql/recipes/_server_debian.rb:34:in `block in from_file'
+[2014-03-02T11:49:48+00:00] WARN: Current  directory[/var/lib/mysql]: /tmp/kitchen/cookbooks/mysql/recipes/_server_debian.rb:78:in `from_file'
+Recipe: build-essential::debian[0m
+  * execute[apt-get-update-build-essentials] action run[0m[2014-03-02T11:49:48+00:00] INFO: Processing execute[apt-get-update-build-essentials] action run (build-essential::debian line 22)
+Hit http://security.debian.org wheezy/updates Release.gpg
+Hit http://security.debian.org wheezy/updates Release
+Hit http://security.debian.org wheezy/updates/main amd64 Packages
+Hit http://http.debian.net wheezy Release.gpg
+Hit http://http.debian.net wheezy-updates Release.gpg
+Hit http://http.debian.net wheezy Release
+Hit http://http.debian.net wheezy-updates Release
+Hit http://http.debian.net wheezy/main amd64 Packages
+Hit http://http.debian.net wheezy-updates/main amd64 Packages/DiffIndex
+Reading package lists...
+[2014-03-02T11:50:04+00:00] INFO: execute[apt-get-update-build-essentials] ran successfully
+[32m
+    - execute apt-get update[0m
+[0m
+  * package[autoconf] action install[0m[2014-03-02T11:50:04+00:00] INFO: Processing package[autoconf] action install (build-essential::debian line 40)
+[32m
+    - install version 2.69-1 of package autoconf[0m
+[0m
+  * package[binutils-doc] action install[0m[2014-03-02T11:50:23+00:00] INFO: Processing package[binutils-doc] action install (build-essential::debian line 40)
+[32m
+    - install version 2.22-8 of package binutils-doc[0m
+[0m
+  * package[bison] action install[0m[2014-03-02T11:50:46+00:00] INFO: Processing package[bison] action install (build-essential::debian line 40)
+[32m
+    - install version 1:2.5.dfsg-2.1 of package bison[0m
+[0m
+  * package[build-essential] action install[0m[2014-03-02T11:51:10+00:00] INFO: Processing package[build-essential] action install (build-essential::debian line 40)
+[32m
+    - install version 11.5 of package build-essential[0m
+[0m
+  * package[flex] action install[0m[2014-03-02T11:52:10+00:00] INFO: Processing package[flex] action install (build-essential::debian line 40)
+[32m
+    - install version 2.5.35-10.1 of package flex[0m
+[0m
+Recipe: mysql::client[0m
+  * package[mysql-client] action install[0m[2014-03-02T11:52:27+00:00] INFO: Processing package[mysql-client] action install (mysql::client line 47)
+[32m
+    - install version 5.5.35+dfsg-0+wheezy1 of package mysql-client[0m
+[0m
+
+  * package[libmysqlclient-dev] action install[0m[2014-03-02T11:52:47+00:00] INFO: Processing package[libmysqlclient-dev] action install (mysql::client line 47)
+[32m
+    - install version 5.5.35+dfsg-0+wheezy1 of package libmysqlclient-dev[0m
+[0m
+Recipe: mysql::ruby[0m
+  * chef_gem[mysql] action install[0m[2014-03-02T11:53:01+00:00] INFO: Processing chef_gem[mysql] action install (mysql::ruby line 47)
+[32m
+    - install version 2.9.1 of package mysql[0m
+[0m
+[2014-03-02T11:53:24+00:00] WARN: Cloning resource attributes for mysql_database_user[gerrit] from prior resource (CHEF-3694)
+[2014-03-02T11:53:24+00:00] WARN: Previous mysql_database_user[gerrit]: /tmp/kitchen/cookbooks/gerrit/recipes/mysql.rb:68:in `from_file'
+[2014-03-02T11:53:24+00:00] WARN: Current  mysql_database_user[gerrit]: /tmp/kitchen/cookbooks/gerrit/recipes/mysql.rb:74:in `from_file'
+[2014-03-02T11:53:24+00:00] WARN: Cloning resource attributes for service[apache2] from prior resource (CHEF-3694)
+[2014-03-02T11:53:24+00:00] WARN: Previous service[apache2]: /tmp/kitchen/cookbooks/apache2/recipes/default.rb:24:in `from_file'
+[2014-03-02T11:53:24+00:00] WARN: Current  service[apache2]: /tmp/kitchen/cookbooks/apache2/recipes/default.rb:210:in `from_file'
+[2014-03-02T11:53:24+00:00] WARN: Cloning resource attributes for execute[a2dissite default] from prior resource (CHEF-3694)
+[2014-03-02T11:53:24+00:00] WARN: Previous execute[a2dissite default]: /tmp/kitchen/cookbooks/apache2/definitions/apache_site.rb:34:in `block in from_file'
+[2014-03-02T11:53:24+00:00] WARN: Current  execute[a2dissite default]: /tmp/kitchen/cookbooks/apache2/definitions/apache_site.rb:34:in `block in from_file'
+[0m
+================================================================================[0m
+[31mRecipe Compile Error in /tmp/kitchen/cookbooks/gerrit/recipes/default.rb[0m
+================================================================================[0m
+
+[0m
+TypeError[0m
+---------[0m
+can't convert nil into String[0m
+
+[0m
+Cookbook Trace:[0m
+---------------[0m
+  /tmp/kitchen/cookbooks/gerrit/recipes/proxy.rb:51:in `exist?'
+  /tmp/kitchen/cookbooks/gerrit/recipes/proxy.rb:51:in `block in from_file'
+  /tmp/kitchen/cookbooks/gerrit/recipes/proxy.rb:44:in `from_file'
+  /tmp/kitchen/cookbooks/gerrit/recipes/default.rb:117:in `from_file'[0m
+
+[0m
+Relevant File Content:[0m
+----------------------[0m
+/tmp/kitchen/cookbooks/gerrit/recipes/proxy.rb:
+
+ 44:  web_app node['gerrit']['hostname'] do
+ 45:    server_name node['gerrit']['hostname']
+ 46:    server_aliases []
+ 47:    docroot "/var/www"
+ 48:    template "apache/web_app.conf.erb"
+ 49:    ssl_certfile         ssl_certfile_path
+ 50:    ssl_keyfile          ssl_keyfile_path
+ 51>>   ssl_cabundle_used    ::File::exist?(ssl_cabundle_path)
+ 52:    ssl_cabundle         ssl_cabundle_path
+ 53:  end
+ 54:  [0m
+
+[0m
+
+Running handlers:[0m
+[2014-03-02T11:53:24+00:00] ERROR: Running exception handlers
+Running handlers complete
+[0m
+[2014-03-02T11:53:24+00:00] ERROR: Exception handlers complete
+[2014-03-02T11:53:24+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+Chef Client failed. 9 resources updated in 217.676445826 seconds[0m
+[2014-03-02T11:53:25+00:00] ERROR: can't convert nil into String
+[2014-03-02T11:53:25+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+Converge failed on instance <default-debian>.
+------Exception-------
+Class: Kitchen::ActionFailed
+Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+---Nested Exception---
+Class: Kitchen::SSHFailed
+Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+------Backtrace-------
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+/usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+/var/lib/gems/1.9.1/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+/var/lib/gems/1.9.1/gems/logging-1.8.2/lib/logging/diagnostic_context.rb:323:in `call'
+/var/lib/gems/1.9.1/gems/logging-1.8.2/lib/logging/diagnostic_context.rb:323:in `block in create_with_logging_context'
+----------------------

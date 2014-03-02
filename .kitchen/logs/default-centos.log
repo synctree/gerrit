@@ -1,0 +1,420 @@
+I, [2014-03-02T11:10:45.540564 #9867]  INFO -- default-centos: -----> Creating <default-centos>...
+I, [2014-03-02T11:10:45.588476 #9867]  INFO -- default-centos: Step 0 : FROM centos
+I, [2014-03-02T11:10:45.590328 #9867]  INFO -- default-centos: Pulling repository centos
+I, [2014-03-02T11:11:20.324301 #9867]  INFO -- default-centos:  ---> 539c0211cd76
+I, [2014-03-02T11:11:20.329539 #9867]  INFO -- default-centos: Step 1 : RUN yum clean all
+I, [2014-03-02T11:11:20.389174 #9867]  INFO -- default-centos:  ---> Running in cb3a14a9ce53
+I, [2014-03-02T11:11:21.182041 #9867]  INFO -- default-centos: Loaded plugins: fastestmirror
+I, [2014-03-02T11:11:21.259264 #9867]  INFO -- default-centos: Cleaning repos: base extras updates
+I, [2014-03-02T11:11:21.268449 #9867]  INFO -- default-centos: Cleaning up Everything
+I, [2014-03-02T11:11:21.376163 #9867]  INFO -- default-centos:  ---> c2827bb20ae8
+I, [2014-03-02T11:11:21.381247 #9867]  INFO -- default-centos: Step 2 : RUN yum install -y sudo openssh-server openssh-clients curl
+I, [2014-03-02T11:11:21.413469 #9867]  INFO -- default-centos:  ---> Running in 39ff20196578
+I, [2014-03-02T11:11:21.875575 #9867]  INFO -- default-centos: Loaded plugins: fastestmirror
+I, [2014-03-02T11:11:21.948115 #9867]  INFO -- default-centos: Determining fastest mirrors
+I, [2014-03-02T11:11:27.908211 #9867]  INFO -- default-centos:  * base: ftp.halifax.rwth-aachen.de
+I, [2014-03-02T11:11:27.908314 #9867]  INFO -- default-centos:  * extras: ftp.halifax.rwth-aachen.de
+I, [2014-03-02T11:11:27.909527 #9867]  INFO -- default-centos:  * updates: ftp.halifax.rwth-aachen.de
+I, [2014-03-02T11:11:40.031636 #9867]  INFO -- default-centos: Setting up Install Process
+I, [2014-03-02T11:11:40.865749 #9867]  INFO -- default-centos: Resolving Dependencies
+I, [2014-03-02T11:11:40.865823 #9867]  INFO -- default-centos: --> Running transaction check
+I, [2014-03-02T11:11:40.866109 #9867]  INFO -- default-centos: ---> Package curl.x86_64 0:7.19.7-35.el6 will be updated
+I, [2014-03-02T11:11:40.874293 #9867]  INFO -- default-centos: ---> Package curl.x86_64 0:7.19.7-37.el6_4 will be an update
+I, [2014-03-02T11:11:40.883668 #9867]  INFO -- default-centos: --> Processing Dependency: libcurl = 7.19.7-37.el6_4 for package: curl-7.19.7-37.el6_4.x86_64
+I, [2014-03-02T11:11:40.888802 #9867]  INFO -- default-centos: ---> Package openssh-clients.x86_64 0:5.3p1-94.el6 will be installed
+I, [2014-03-02T11:11:41.104368 #9867]  INFO -- default-centos: --> Processing Dependency: openssh = 5.3p1-94.el6 for package: openssh-clients-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.111173 #9867]  INFO -- default-centos: --> Processing Dependency: libcrypto.so.10(libcrypto.so.10)(64bit) for package: openssh-clients-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.123933 #9867]  INFO -- default-centos: --> Processing Dependency: libcrypto.so.10(OPENSSL_1.0.1)(64bit) for package: openssh-clients-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.126464 #9867]  INFO -- default-centos: --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.133381 #9867]  INFO -- default-centos: --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.137548 #9867]  INFO -- default-centos: ---> Package openssh-server.x86_64 0:5.3p1-94.el6 will be installed
+I, [2014-03-02T11:11:41.174591 #9867]  INFO -- default-centos: --> Processing Dependency: libwrap.so.0()(64bit) for package: openssh-server-5.3p1-94.el6.x86_64
+I, [2014-03-02T11:11:41.183692 #9867]  INFO -- default-centos: ---> Package sudo.x86_64 0:1.8.6p3-12.el6 will be installed
+I, [2014-03-02T11:11:41.190767 #9867]  INFO -- default-centos: --> Running transaction check
+I, [2014-03-02T11:11:41.197990 #9867]  INFO -- default-centos: ---> Package fipscheck-lib.x86_64 0:1.2.0-7.el6 will be installed
+I, [2014-03-02T11:11:41.203464 #9867]  INFO -- default-centos: --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.2.0-7.el6.x86_64
+I, [2014-03-02T11:11:41.205734 #9867]  INFO -- default-centos: ---> Package libcurl.x86_64 0:7.19.7-35.el6 will be updated
+I, [2014-03-02T11:11:41.216660 #9867]  INFO -- default-centos: ---> Package libcurl.x86_64 0:7.19.7-37.el6_4 will be an update
+I, [2014-03-02T11:11:41.218272 #9867]  INFO -- default-centos: ---> Package libedit.x86_64 0:2.11-4.20080712cvs.1.el6 will be installed
+I, [2014-03-02T11:11:41.225727 #9867]  INFO -- default-centos: ---> Package openssh.x86_64 0:5.3p1-94.el6 will be installed
+I, [2014-03-02T11:11:41.236801 #9867]  INFO -- default-centos: ---> Package openssl.x86_64 0:1.0.0-27.el6_4.2 will be updated
+I, [2014-03-02T11:11:41.250366 #9867]  INFO -- default-centos: ---> Package openssl.x86_64 0:1.0.1e-16.el6_5.4 will be an update
+I, [2014-03-02T11:11:41.255954 #9867]  INFO -- default-centos: --> Processing Dependency: make for package: openssl-1.0.1e-16.el6_5.4.x86_64
+I, [2014-03-02T11:11:41.263030 #9867]  INFO -- default-centos: ---> Package tcp_wrappers-libs.x86_64 0:7.6-57.el6 will be installed
+I, [2014-03-02T11:11:41.274956 #9867]  INFO -- default-centos: --> Running transaction check
+I, [2014-03-02T11:11:41.275593 #9867]  INFO -- default-centos: ---> Package fipscheck.x86_64 0:1.2.0-7.el6 will be installed
+I, [2014-03-02T11:11:41.278950 #9867]  INFO -- default-centos: ---> Package make.x86_64 1:3.81-20.el6 will be installed
+I, [2014-03-02T11:11:41.957812 #9867]  INFO -- default-centos: --> Finished Dependency Resolution
+I, [2014-03-02T11:11:41.986532 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:41.988008 #9867]  INFO -- default-centos: Dependencies Resolved
+I, [2014-03-02T11:11:41.991149 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:41.991913 #9867]  INFO -- default-centos: ================================================================================
+I, [2014-03-02T11:11:41.992210 #9867]  INFO -- default-centos:  Package              Arch      Version                        Repository  Size
+I, [2014-03-02T11:11:41.992313 #9867]  INFO -- default-centos: ================================================================================
+I, [2014-03-02T11:11:41.992865 #9867]  INFO -- default-centos: Installing:
+I, [2014-03-02T11:11:41.992902 #9867]  INFO -- default-centos:  openssh-clients      x86_64    5.3p1-94.el6                   base       402 k
+I, [2014-03-02T11:11:41.993023 #9867]  INFO -- default-centos:  openssh-server       x86_64    5.3p1-94.el6                   base       311 k
+I, [2014-03-02T11:11:41.993256 #9867]  INFO -- default-centos:  sudo                 x86_64    1.8.6p3-12.el6                 base       703 k
+I, [2014-03-02T11:11:41.993612 #9867]  INFO -- default-centos: Updating:
+I, [2014-03-02T11:11:41.993724 #9867]  INFO -- default-centos:  curl                 x86_64    7.19.7-37.el6_4                base       193 k
+I, [2014-03-02T11:11:41.993839 #9867]  INFO -- default-centos: Installing for dependencies:
+I, [2014-03-02T11:11:41.993949 #9867]  INFO -- default-centos:  fipscheck            x86_64    1.2.0-7.el6                    base        14 k
+I, [2014-03-02T11:11:41.994061 #9867]  INFO -- default-centos:  fipscheck-lib        x86_64    1.2.0-7.el6                    base       8.3 k
+I, [2014-03-02T11:11:41.994173 #9867]  INFO -- default-centos:  libedit              x86_64    2.11-4.20080712cvs.1.el6       base        74 k
+I, [2014-03-02T11:11:41.995036 #9867]  INFO -- default-centos:  make                 x86_64    1:3.81-20.el6                  base       389 k
+I, [2014-03-02T11:11:41.995136 #9867]  INFO -- default-centos:  openssh              x86_64    5.3p1-94.el6                   base       258 k
+I, [2014-03-02T11:11:41.997211 #9867]  INFO -- default-centos:  tcp_wrappers-libs    x86_64    7.6-57.el6                     base        62 k
+I, [2014-03-02T11:11:41.997903 #9867]  INFO -- default-centos: Updating for dependencies:
+I, [2014-03-02T11:11:42.000557 #9867]  INFO -- default-centos:  libcurl              x86_64    7.19.7-37.el6_4                base       165 k
+I, [2014-03-02T11:11:42.000830 #9867]  INFO -- default-centos:  openssl              x86_64    1.0.1e-16.el6_5.4              updates    1.5 M
+I, [2014-03-02T11:11:42.001839 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:42.004616 #9867]  INFO -- default-centos: Transaction Summary
+I, [2014-03-02T11:11:42.005817 #9867]  INFO -- default-centos: ================================================================================
+I, [2014-03-02T11:11:42.006291 #9867]  INFO -- default-centos: Install       9 Package(s)
+I, [2014-03-02T11:11:42.006423 #9867]  INFO -- default-centos: Upgrade       3 Package(s)
+I, [2014-03-02T11:11:42.006950 #9867]  INFO -- default-centos: Total download size: 4.0 M
+I, [2014-03-02T11:11:42.007298 #9867]  INFO -- default-centos: Downloading Packages:
+I, [2014-03-02T11:11:43.812775 #9867]  INFO -- default-centos: --------------------------------------------------------------------------------
+I, [2014-03-02T11:11:43.813200 #9867]  INFO -- default-centos: Total                                           2.2 MB/s | 4.0 MB     00:01     
+[91mwarning: [0mI, [2014-03-02T11:11:43.817955 #9867]  INFO -- default-centos: [91mrpmts_HdrFromFdno: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+I, [2014-03-02T11:11:43.818467 #9867]  INFO -- default-centos: [0m
+I, [2014-03-02T11:11:43.818633 #9867]  INFO -- default-centos: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+I, [2014-03-02T11:11:43.839527 #9867]  INFO -- default-centos: [91mImporting GPG key 0xC105B9DE:
+I, [2014-03-02T11:11:43.839598 #9867]  INFO -- default-centos:  Userid : CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
+I, [2014-03-02T11:11:43.840386 #9867]  INFO -- default-centos:  Package: centos-release-6-4.el6.centos.10.x86_64 (@febootstrap/$releasever)
+I, [2014-03-02T11:11:43.840556 #9867]  INFO -- default-centos:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+I, [2014-03-02T11:11:43.844582 #9867]  INFO -- default-centos: [0m
+I, [2014-03-02T11:11:44.027591 #9867]  INFO -- default-centos: Running rpm_check_debug
+I, [2014-03-02T11:11:44.107170 #9867]  INFO -- default-centos: Running Transaction Test
+I, [2014-03-02T11:11:44.175380 #9867]  INFO -- default-centos: Transaction Test Succeeded
+I, [2014-03-02T11:11:44.259026 #9867]  INFO -- default-centos: Running Transaction
+  Updating   : libcurl-7.19.7-37.el6_4.x86_64                              1/15I, [2014-03-02T11:11:44.595445 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:44.595525 #9867]  INFO -- default-centos:   Installing : libedit-2.11-4.20080712cvs.1.el6.x86_64                     2/15
+I, [2014-03-02T11:11:44.662038 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:44.662323 #9867]  INFO -- default-centos:   Installing : tcp_wrappers-libs-7.6-57.el6.x86_64                         3/15
+I, [2014-03-02T11:11:44.821399 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:44.821803 #9867]  INFO -- default-centos:   Installing : 1:make-3.81-20.el6.x86_64                                   4/15
+I, [2014-03-02T11:11:45.313497 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.313796 #9867]  INFO -- default-centos:   Updating   : openssl-1.0.1e-16.el6_5.4.x86_64                            5/15
+I, [2014-03-02T11:11:45.372148 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.372264 #9867]  INFO -- default-centos:   Installing : fipscheck-lib-1.2.0-7.el6.x86_64                            6/15
+I, [2014-03-02T11:11:45.420673 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.420812 #9867]  INFO -- default-centos:   Installing : fipscheck-1.2.0-7.el6.x86_64                                7/15
+I, [2014-03-02T11:11:45.522800 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.522880 #9867]  INFO -- default-centos:   Installing : openssh-5.3p1-94.el6.x86_64                                 8/15
+I, [2014-03-02T11:11:45.688814 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.689830 #9867]  INFO -- default-centos:   Installing : openssh-server-5.3p1-94.el6.x86_64                          9/15
+I, [2014-03-02T11:11:45.880435 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.880522 #9867]  INFO -- default-centos:   Installing : openssh-clients-5.3p1-94.el6.x86_64                        10/15
+I, [2014-03-02T11:11:45.961634 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:45.961781 #9867]  INFO -- default-centos:   Updating   : curl-7.19.7-37.el6_4.x86_64                                11/15
+I, [2014-03-02T11:11:46.223444 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.223546 #9867]  INFO -- default-centos:   Installing : sudo-1.8.6p3-12.el6.x86_64                                 12/15
+I, [2014-03-02T11:11:46.277395 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.277468 #9867]  INFO -- default-centos:   Cleanup    : curl-7.19.7-35.el6.x86_64                                  13/15
+I, [2014-03-02T11:11:46.298602 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.298679 #9867]  INFO -- default-centos:   Cleanup    : libcurl-7.19.7-35.el6.x86_64                               14/15
+I, [2014-03-02T11:11:46.341821 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.341858 #9867]  INFO -- default-centos:   Cleanup    : openssl-1.0.0-27.el6_4.2.x86_64                            15/15
+I, [2014-03-02T11:11:46.395640 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.395695 #9867]  INFO -- default-centos:   Verifying  : 1:make-3.81-20.el6.x86_64                                   1/15
+I, [2014-03-02T11:11:46.410405 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.410475 #9867]  INFO -- default-centos:   Verifying  : tcp_wrappers-libs-7.6-57.el6.x86_64                         2/15
+I, [2014-03-02T11:11:46.425957 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.426042 #9867]  INFO -- default-centos:   Verifying  : sudo-1.8.6p3-12.el6.x86_64                                  3/15
+I, [2014-03-02T11:11:46.437205 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.440569 #9867]  INFO -- default-centos:   Verifying  : fipscheck-1.2.0-7.el6.x86_64                                4/15
+I, [2014-03-02T11:11:46.449150 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.449238 #9867]  INFO -- default-centos:   Verifying  : openssl-1.0.1e-16.el6_5.4.x86_64                            5/15
+I, [2014-03-02T11:11:46.463103 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.463189 #9867]  INFO -- default-centos:   Verifying  : libedit-2.11-4.20080712cvs.1.el6.x86_64                     6/15
+I, [2014-03-02T11:11:46.482082 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.482182 #9867]  INFO -- default-centos:   Verifying  : curl-7.19.7-37.el6_4.x86_64                                 7/15
+I, [2014-03-02T11:11:46.492707 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.492779 #9867]  INFO -- default-centos:   Verifying  : openssh-5.3p1-94.el6.x86_64                                 8/15
+I, [2014-03-02T11:11:46.507254 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.508150 #9867]  INFO -- default-centos:   Verifying  : openssh-server-5.3p1-94.el6.x86_64                          9/15
+I, [2014-03-02T11:11:46.525781 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.525900 #9867]  INFO -- default-centos:   Verifying  : libcurl-7.19.7-37.el6_4.x86_64                             10/15
+I, [2014-03-02T11:11:46.541130 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.541210 #9867]  INFO -- default-centos:   Verifying  : openssh-clients-5.3p1-94.el6.x86_64                        11/15
+I, [2014-03-02T11:11:46.552804 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.552899 #9867]  INFO -- default-centos:   Verifying  : fipscheck-lib-1.2.0-7.el6.x86_64                           12/15
+I, [2014-03-02T11:11:46.572220 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.572221 #9867]  INFO -- default-centos:   Verifying  : libcurl-7.19.7-35.el6.x86_64                               13/15
+I, [2014-03-02T11:11:46.573683 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.573794 #9867]  INFO -- default-centos:   Verifying  : openssl-1.0.0-27.el6_4.2.x86_64                            14/15
+I, [2014-03-02T11:11:46.576170 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.576308 #9867]  INFO -- default-centos:   Verifying  : curl-7.19.7-35.el6.x86_64                                  15/15
+I, [2014-03-02T11:11:46.623881 #9867]  INFO -- default-centos:  
+I, [2014-03-02T11:11:46.624540 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:46.624731 #9867]  INFO -- default-centos: Installed:
+I, [2014-03-02T11:11:46.624855 #9867]  INFO -- default-centos:   openssh-clients.x86_64 0:5.3p1-94.el6   openssh-server.x86_64 0:5.3p1-94.el6  
+I, [2014-03-02T11:11:46.624974 #9867]  INFO -- default-centos:   sudo.x86_64 0:1.8.6p3-12.el6           
+I, [2014-03-02T11:11:46.628551 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:46.628923 #9867]  INFO -- default-centos: Dependency Installed:
+I, [2014-03-02T11:11:46.629449 #9867]  INFO -- default-centos:   fipscheck.x86_64 0:1.2.0-7.el6                                                
+I, [2014-03-02T11:11:46.629532 #9867]  INFO -- default-centos:   fipscheck-lib.x86_64 0:1.2.0-7.el6                                            
+I, [2014-03-02T11:11:46.629774 #9867]  INFO -- default-centos:   libedit.x86_64 0:2.11-4.20080712cvs.1.el6                                     
+I, [2014-03-02T11:11:46.629827 #9867]  INFO -- default-centos:   make.x86_64 1:3.81-20.el6                                                     
+I, [2014-03-02T11:11:46.629951 #9867]  INFO -- default-centos:   openssh.x86_64 0:5.3p1-94.el6                                                 
+I, [2014-03-02T11:11:46.630284 #9867]  INFO -- default-centos:   tcp_wrappers-libs.x86_64 0:7.6-57.el6                                         
+I, [2014-03-02T11:11:46.630558 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:46.630815 #9867]  INFO -- default-centos: Updated:
+I, [2014-03-02T11:11:46.631066 #9867]  INFO -- default-centos:   curl.x86_64 0:7.19.7-37.el6_4                                                 
+I, [2014-03-02T11:11:46.631307 #9867]  INFO -- default-centos: 
+I, [2014-03-02T11:11:46.631544 #9867]  INFO -- default-centos: Dependency Updated:
+I, [2014-03-02T11:11:46.631794 #9867]  INFO -- default-centos:   libcurl.x86_64 0:7.19.7-37.el6_4      openssl.x86_64 0:1.0.1e-16.el6_5.4     
+I, [2014-03-02T11:11:46.632357 #9867]  INFO -- default-centos: Complete!
+I, [2014-03-02T11:11:48.501898 #9867]  INFO -- default-centos:  ---> 0fe72d59bc9f
+I, [2014-03-02T11:11:48.502465 #9867]  INFO -- default-centos: Step 3 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+I, [2014-03-02T11:11:48.570664 #9867]  INFO -- default-centos:  ---> Running in 279cce796564
+[91mEnter passphrase (empty for no passphrase): [0m[91mEnter same passphrase again: [0mI, [2014-03-02T11:11:49.011851 #9867]  INFO -- default-centos: Generating public/private rsa key pair.
+I, [2014-03-02T11:11:49.011924 #9867]  INFO -- default-centos: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+I, [2014-03-02T11:11:49.014621 #9867]  INFO -- default-centos: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+I, [2014-03-02T11:11:49.016703 #9867]  INFO -- default-centos: The key fingerprint is:
+I, [2014-03-02T11:11:49.018377 #9867]  INFO -- default-centos: e3:b1:54:0e:83:1c:59:cb:60:0e:cc:09:46:b6:4c:d0 root@cb3a14a9ce53
+I, [2014-03-02T11:11:49.020695 #9867]  INFO -- default-centos: The key's randomart image is:
+I, [2014-03-02T11:11:49.021288 #9867]  INFO -- default-centos: +--[ RSA 2048]----+
+I, [2014-03-02T11:11:49.021629 #9867]  INFO -- default-centos: |.+*+..+o.        |
+I, [2014-03-02T11:11:49.021737 #9867]  INFO -- default-centos: | =E.+=.= .       |
+I, [2014-03-02T11:11:49.021850 #9867]  INFO -- default-centos: |  o   + = .      |
+I, [2014-03-02T11:11:49.021978 #9867]  INFO -- default-centos: |         =       |
+I, [2014-03-02T11:11:49.022062 #9867]  INFO -- default-centos: |        S .      |
+I, [2014-03-02T11:11:49.022174 #9867]  INFO -- default-centos: |       o +       |
+I, [2014-03-02T11:11:49.022338 #9867]  INFO -- default-centos: |        o        |
+I, [2014-03-02T11:11:49.022502 #9867]  INFO -- default-centos: |                 |
+I, [2014-03-02T11:11:49.022664 #9867]  INFO -- default-centos: |                 |
+I, [2014-03-02T11:11:49.023291 #9867]  INFO -- default-centos: +-----------------+
+I, [2014-03-02T11:11:49.078413 #9867]  INFO -- default-centos:  ---> 6ab251c5be41
+I, [2014-03-02T11:11:49.079117 #9867]  INFO -- default-centos: Step 4 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+I, [2014-03-02T11:11:49.098433 #9867]  INFO -- default-centos:  ---> Running in 617fb498faab
+[91mEnter passphrase (empty for no passphrase): [0m[91mEnter same passphrase again: [0mI, [2014-03-02T11:11:49.499229 #9867]  INFO -- default-centos: Generating public/private dsa key pair.
+I, [2014-03-02T11:11:49.499288 #9867]  INFO -- default-centos: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+I, [2014-03-02T11:11:49.499491 #9867]  INFO -- default-centos: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+I, [2014-03-02T11:11:49.499657 #9867]  INFO -- default-centos: The key fingerprint is:
+I, [2014-03-02T11:11:49.501244 #9867]  INFO -- default-centos: 03:ac:f2:5a:55:19:1d:c8:08:9f:da:ab:7e:5e:f0:0c root@cb3a14a9ce53
+I, [2014-03-02T11:11:49.505637 #9867]  INFO -- default-centos: The key's randomart image is:
+I, [2014-03-02T11:11:49.505997 #9867]  INFO -- default-centos: +--[ DSA 1024]----+
+I, [2014-03-02T11:11:49.506290 #9867]  INFO -- default-centos: |    .. o.o..     |
+I, [2014-03-02T11:11:49.506442 #9867]  INFO -- default-centos: |     o..oo.      |
+I, [2014-03-02T11:11:49.506623 #9867]  INFO -- default-centos: |      = o        |
+I, [2014-03-02T11:11:49.506809 #9867]  INFO -- default-centos: |     + o         |
+I, [2014-03-02T11:11:49.507080 #9867]  INFO -- default-centos: |  . o E S        |
+I, [2014-03-02T11:11:49.507389 #9867]  INFO -- default-centos: |   o . * .       |
+I, [2014-03-02T11:11:49.507560 #9867]  INFO -- default-centos: |    o . +        |
+I, [2014-03-02T11:11:49.507723 #9867]  INFO -- default-centos: |   o ...         |
+I, [2014-03-02T11:11:49.507902 #9867]  INFO -- default-centos: |  ..oo.          |
+I, [2014-03-02T11:11:49.508057 #9867]  INFO -- default-centos: +-----------------+
+I, [2014-03-02T11:11:49.554969 #9867]  INFO -- default-centos:  ---> 5c4bddf44370
+I, [2014-03-02T11:11:49.558041 #9867]  INFO -- default-centos: Step 5 : RUN mkdir -p /var/run/sshd
+I, [2014-03-02T11:11:49.587909 #9867]  INFO -- default-centos:  ---> Running in f9eaf00cba0b
+I, [2014-03-02T11:11:49.882387 #9867]  INFO -- default-centos:  ---> 003a3a0ca442
+I, [2014-03-02T11:11:49.885696 #9867]  INFO -- default-centos: Step 6 : RUN useradd -d /home/kitchen -m -s /bin/bash kitchen
+I, [2014-03-02T11:11:49.924351 #9867]  INFO -- default-centos:  ---> Running in a5983045a2de
+I, [2014-03-02T11:11:50.240655 #9867]  INFO -- default-centos:  ---> 439eeda3016a
+I, [2014-03-02T11:11:50.241227 #9867]  INFO -- default-centos: Step 7 : RUN echo kitchen:kitchen | chpasswd
+I, [2014-03-02T11:11:50.271650 #9867]  INFO -- default-centos:  ---> Running in 8cbe7aa1b706
+I, [2014-03-02T11:11:50.577217 #9867]  INFO -- default-centos:  ---> f144f727f1fa
+I, [2014-03-02T11:11:50.578545 #9867]  INFO -- default-centos: Step 8 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2014-03-02T11:11:50.605785 #9867]  INFO -- default-centos:  ---> Running in e777553eed90
+I, [2014-03-02T11:11:50.906895 #9867]  INFO -- default-centos:  ---> 39de09893645
+I, [2014-03-02T11:11:50.908771 #9867]  INFO -- default-centos: Successfully built 39de09893645
+I, [2014-03-02T11:11:51.039610 #9867]  INFO -- default-centos: 2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7
+I, [2014-03-02T11:11:51.258228 #9867]  INFO -- default-centos: [{
+I, [2014-03-02T11:11:51.258771 #9867]  INFO -- default-centos:     "ID": "2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7",
+I, [2014-03-02T11:11:51.259131 #9867]  INFO -- default-centos:     "Created": "2014-03-02T11:11:51.025258009Z",
+I, [2014-03-02T11:11:51.259290 #9867]  INFO -- default-centos:     "Path": "/usr/sbin/sshd",
+I, [2014-03-02T11:11:51.259376 #9867]  INFO -- default-centos:     "Args": [
+I, [2014-03-02T11:11:51.259523 #9867]  INFO -- default-centos:  "-D",
+I, [2014-03-02T11:11:51.259656 #9867]  INFO -- default-centos:  "-o",
+I, [2014-03-02T11:11:51.259749 #9867]  INFO -- default-centos:  "UseDNS=no",
+I, [2014-03-02T11:11:51.259877 #9867]  INFO -- default-centos:  "-o",
+I, [2014-03-02T11:11:51.259995 #9867]  INFO -- default-centos:  "UsePAM=no"
+I, [2014-03-02T11:11:51.260118 #9867]  INFO -- default-centos:     ],
+I, [2014-03-02T11:11:51.260241 #9867]  INFO -- default-centos:     "Config": {
+I, [2014-03-02T11:11:51.260373 #9867]  INFO -- default-centos:  "Hostname": "2cce3590f7ee",
+I, [2014-03-02T11:11:51.260546 #9867]  INFO -- default-centos:  "Domainname": "",
+I, [2014-03-02T11:11:51.260676 #9867]  INFO -- default-centos:  "User": "",
+I, [2014-03-02T11:11:51.260795 #9867]  INFO -- default-centos:  "Memory": 0,
+I, [2014-03-02T11:11:51.260917 #9867]  INFO -- default-centos:  "MemorySwap": 0,
+I, [2014-03-02T11:11:51.261005 #9867]  INFO -- default-centos:  "CpuShares": 0,
+I, [2014-03-02T11:11:51.261138 #9867]  INFO -- default-centos:  "AttachStdin": false,
+I, [2014-03-02T11:11:51.261253 #9867]  INFO -- default-centos:  "AttachStdout": false,
+I, [2014-03-02T11:11:51.261380 #9867]  INFO -- default-centos:  "AttachStderr": false,
+I, [2014-03-02T11:11:51.261499 #9867]  INFO -- default-centos:  "PortSpecs": null,
+I, [2014-03-02T11:11:51.261626 #9867]  INFO -- default-centos:  "ExposedPorts": {
+I, [2014-03-02T11:11:51.261747 #9867]  INFO -- default-centos:      "22/tcp": {}
+I, [2014-03-02T11:11:51.261884 #9867]  INFO -- default-centos:  },
+I, [2014-03-02T11:11:51.261966 #9867]  INFO -- default-centos:  "Tty": false,
+I, [2014-03-02T11:11:51.264771 #9867]  INFO -- default-centos:  "OpenStdin": false,
+I, [2014-03-02T11:11:51.265023 #9867]  INFO -- default-centos:  "StdinOnce": false,
+I, [2014-03-02T11:11:51.268593 #9867]  INFO -- default-centos:  "Env": [
+I, [2014-03-02T11:11:51.268806 #9867]  INFO -- default-centos:      "HOME=/",
+I, [2014-03-02T11:11:51.272011 #9867]  INFO -- default-centos:      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+I, [2014-03-02T11:11:51.272620 #9867]  INFO -- default-centos:  ],
+I, [2014-03-02T11:11:51.272702 #9867]  INFO -- default-centos:  "Cmd": [
+I, [2014-03-02T11:11:51.276380 #9867]  INFO -- default-centos:      "/usr/sbin/sshd",
+I, [2014-03-02T11:11:51.277325 #9867]  INFO -- default-centos:      "-D",
+I, [2014-03-02T11:11:51.279798 #9867]  INFO -- default-centos:      "-o",
+I, [2014-03-02T11:11:51.280502 #9867]  INFO -- default-centos:      "UseDNS=no",
+I, [2014-03-02T11:11:51.282414 #9867]  INFO -- default-centos:      "-o",
+I, [2014-03-02T11:11:51.284495 #9867]  INFO -- default-centos:      "UsePAM=no"
+I, [2014-03-02T11:11:51.288556 #9867]  INFO -- default-centos:  ],
+I, [2014-03-02T11:11:51.292457 #9867]  INFO -- default-centos:  "Dns": null,
+I, [2014-03-02T11:11:51.292540 #9867]  INFO -- default-centos:  "Image": "39de09893645",
+I, [2014-03-02T11:11:51.296542 #9867]  INFO -- default-centos:  "Volumes": {},
+I, [2014-03-02T11:11:51.300548 #9867]  INFO -- default-centos:  "VolumesFrom": "",
+I, [2014-03-02T11:11:51.302334 #9867]  INFO -- default-centos:  "WorkingDir": "",
+I, [2014-03-02T11:11:51.304398 #9867]  INFO -- default-centos:  "Entrypoint": null,
+I, [2014-03-02T11:11:51.304540 #9867]  INFO -- default-centos:  "NetworkDisabled": false,
+I, [2014-03-02T11:11:51.308606 #9867]  INFO -- default-centos:  "OnBuild": null
+I, [2014-03-02T11:11:51.308945 #9867]  INFO -- default-centos:     },
+I, [2014-03-02T11:11:51.309068 #9867]  INFO -- default-centos:     "State": {
+I, [2014-03-02T11:11:51.309189 #9867]  INFO -- default-centos:  "Running": true,
+I, [2014-03-02T11:11:51.312284 #9867]  INFO -- default-centos:  "Pid": 14025,
+I, [2014-03-02T11:11:51.313366 #9867]  INFO -- default-centos:  "ExitCode": 0,
+I, [2014-03-02T11:11:51.315159 #9867]  INFO -- default-centos:  "StartedAt": "2014-03-02T11:11:51.158261087Z",
+I, [2014-03-02T11:11:51.315435 #9867]  INFO -- default-centos:  "FinishedAt": "0001-01-01T00:00:00Z",
+I, [2014-03-02T11:11:51.316517 #9867]  INFO -- default-centos:  "Ghost": false
+I, [2014-03-02T11:11:51.320586 #9867]  INFO -- default-centos:     },
+I, [2014-03-02T11:11:51.322367 #9867]  INFO -- default-centos:     "Image": "39de09893645fcd29ace448d7fda4c321b2b80b089b8ca317bd4f300b7824dea",
+I, [2014-03-02T11:11:51.323919 #9867]  INFO -- default-centos:     "NetworkSettings": {
+I, [2014-03-02T11:11:51.324380 #9867]  INFO -- default-centos:  "IPAddress": "172.17.0.3",
+I, [2014-03-02T11:11:51.324488 #9867]  INFO -- default-centos:  "IPPrefixLen": 16,
+I, [2014-03-02T11:11:51.324605 #9867]  INFO -- default-centos:  "Gateway": "172.17.42.1",
+I, [2014-03-02T11:11:51.324835 #9867]  INFO -- default-centos:  "Bridge": "docker0",
+I, [2014-03-02T11:11:51.324963 #9867]  INFO -- default-centos:  "PortMapping": null,
+I, [2014-03-02T11:11:51.325422 #9867]  INFO -- default-centos:  "Ports": {
+I, [2014-03-02T11:11:51.325899 #9867]  INFO -- default-centos:      "22/tcp": [
+I, [2014-03-02T11:11:51.326012 #9867]  INFO -- default-centos:          {
+I, [2014-03-02T11:11:51.326127 #9867]  INFO -- default-centos:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:11:51.326239 #9867]  INFO -- default-centos:              "HostPort": "49154"
+I, [2014-03-02T11:11:51.326352 #9867]  INFO -- default-centos:          }
+I, [2014-03-02T11:11:51.326464 #9867]  INFO -- default-centos:      ]
+I, [2014-03-02T11:11:51.326575 #9867]  INFO -- default-centos:  }
+I, [2014-03-02T11:11:51.326683 #9867]  INFO -- default-centos:     },
+I, [2014-03-02T11:11:51.326790 #9867]  INFO -- default-centos:     "ResolvConfPath": "/etc/resolv.conf",
+I, [2014-03-02T11:11:51.326897 #9867]  INFO -- default-centos:     "HostnamePath": "/var/lib/docker/containers/2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7/hostname",
+I, [2014-03-02T11:11:51.327009 #9867]  INFO -- default-centos:     "HostsPath": "/var/lib/docker/containers/2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7/hosts",
+I, [2014-03-02T11:11:51.327116 #9867]  INFO -- default-centos:     "Name": "/grave_archimedes",
+I, [2014-03-02T11:11:51.327225 #9867]  INFO -- default-centos:     "Driver": "aufs",
+I, [2014-03-02T11:11:51.327335 #9867]  INFO -- default-centos:     "Volumes": {},
+I, [2014-03-02T11:11:51.327441 #9867]  INFO -- default-centos:     "VolumesRW": {},
+I, [2014-03-02T11:11:51.327550 #9867]  INFO -- default-centos:     "HostConfig": {
+I, [2014-03-02T11:11:51.327663 #9867]  INFO -- default-centos:  "Binds": null,
+I, [2014-03-02T11:11:51.327774 #9867]  INFO -- default-centos:  "ContainerIDFile": "",
+I, [2014-03-02T11:11:51.327888 #9867]  INFO -- default-centos:  "LxcConf": [],
+I, [2014-03-02T11:11:51.328001 #9867]  INFO -- default-centos:  "Privileged": false,
+I, [2014-03-02T11:11:51.328112 #9867]  INFO -- default-centos:  "PortBindings": {
+I, [2014-03-02T11:11:51.328228 #9867]  INFO -- default-centos:      "22/tcp": [
+I, [2014-03-02T11:11:51.328339 #9867]  INFO -- default-centos:          {
+I, [2014-03-02T11:11:51.328478 #9867]  INFO -- default-centos:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:11:51.328592 #9867]  INFO -- default-centos:              "HostPort": "49154"
+I, [2014-03-02T11:11:51.328703 #9867]  INFO -- default-centos:          }
+I, [2014-03-02T11:11:51.328817 #9867]  INFO -- default-centos:      ]
+I, [2014-03-02T11:11:51.328927 #9867]  INFO -- default-centos:  },
+I, [2014-03-02T11:11:51.329041 #9867]  INFO -- default-centos:  "Links": null,
+I, [2014-03-02T11:11:51.329154 #9867]  INFO -- default-centos:  "PublishAllPorts": false
+I, [2014-03-02T11:11:51.329260 #9867]  INFO -- default-centos:     }
+I, [2014-03-02T11:11:51.329369 #9867]  INFO -- default-centos: }]
+I, [2014-03-02T11:11:51.387780 #9867]  INFO -- default-centos: Finished creating <default-centos> (1m5.82s).
+I, [2014-03-02T11:12:45.279201 #14129]  INFO -- default-centos: -----> Creating <default-centos>...
+I, [2014-03-02T11:12:45.408744 #14129]  INFO -- default-centos: [{
+I, [2014-03-02T11:12:45.409560 #14129]  INFO -- default-centos:     "ID": "2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7",
+I, [2014-03-02T11:12:45.409700 #14129]  INFO -- default-centos:     "Created": "2014-03-02T11:11:51.025258009Z",
+I, [2014-03-02T11:12:45.409789 #14129]  INFO -- default-centos:     "Path": "/usr/sbin/sshd",
+I, [2014-03-02T11:12:45.409921 #14129]  INFO -- default-centos:     "Args": [
+I, [2014-03-02T11:12:45.410075 #14129]  INFO -- default-centos:  "-D",
+I, [2014-03-02T11:12:45.410200 #14129]  INFO -- default-centos:  "-o",
+I, [2014-03-02T11:12:45.410336 #14129]  INFO -- default-centos:  "UseDNS=no",
+I, [2014-03-02T11:12:45.410455 #14129]  INFO -- default-centos:  "-o",
+I, [2014-03-02T11:12:45.410592 #14129]  INFO -- default-centos:  "UsePAM=no"
+I, [2014-03-02T11:12:45.410703 #14129]  INFO -- default-centos:     ],
+I, [2014-03-02T11:12:45.413345 #14129]  INFO -- default-centos:     "Config": {
+I, [2014-03-02T11:12:45.413628 #14129]  INFO -- default-centos:  "Hostname": "2cce3590f7ee",
+I, [2014-03-02T11:12:45.416617 #14129]  INFO -- default-centos:  "Domainname": "",
+I, [2014-03-02T11:12:45.417060 #14129]  INFO -- default-centos:  "User": "",
+I, [2014-03-02T11:12:45.420370 #14129]  INFO -- default-centos:  "Memory": 0,
+I, [2014-03-02T11:12:45.420529 #14129]  INFO -- default-centos:  "MemorySwap": 0,
+I, [2014-03-02T11:12:45.420741 #14129]  INFO -- default-centos:  "CpuShares": 0,
+I, [2014-03-02T11:12:45.424546 #14129]  INFO -- default-centos:  "AttachStdin": false,
+I, [2014-03-02T11:12:45.427197 #14129]  INFO -- default-centos:  "AttachStdout": false,
+I, [2014-03-02T11:12:45.428371 #14129]  INFO -- default-centos:  "AttachStderr": false,
+I, [2014-03-02T11:12:45.428527 #14129]  INFO -- default-centos:  "PortSpecs": null,
+I, [2014-03-02T11:12:45.429030 #14129]  INFO -- default-centos:  "ExposedPorts": {
+I, [2014-03-02T11:12:45.429191 #14129]  INFO -- default-centos:      "22/tcp": {}
+I, [2014-03-02T11:12:45.432576 #14129]  INFO -- default-centos:  },
+I, [2014-03-02T11:12:45.435900 #14129]  INFO -- default-centos:  "Tty": false,
+I, [2014-03-02T11:12:45.436519 #14129]  INFO -- default-centos:  "OpenStdin": false,
+I, [2014-03-02T11:12:45.440451 #14129]  INFO -- default-centos:  "StdinOnce": false,
+I, [2014-03-02T11:12:45.444558 #14129]  INFO -- default-centos:  "Env": [
+I, [2014-03-02T11:12:45.446249 #14129]  INFO -- default-centos:      "HOME=/",
+I, [2014-03-02T11:12:45.449302 #14129]  INFO -- default-centos:      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+I, [2014-03-02T11:12:45.451211 #14129]  INFO -- default-centos:  ],
+I, [2014-03-02T11:12:45.452406 #14129]  INFO -- default-centos:  "Cmd": [
+I, [2014-03-02T11:12:45.452519 #14129]  INFO -- default-centos:      "/usr/sbin/sshd",
+I, [2014-03-02T11:12:45.452695 #14129]  INFO -- default-centos:      "-D",
+I, [2014-03-02T11:12:45.452963 #14129]  INFO -- default-centos:      "-o",
+I, [2014-03-02T11:12:45.453094 #14129]  INFO -- default-centos:      "UseDNS=no",
+I, [2014-03-02T11:12:45.456548 #14129]  INFO -- default-centos:      "-o",
+I, [2014-03-02T11:12:45.457094 #14129]  INFO -- default-centos:      "UsePAM=no"
+I, [2014-03-02T11:12:45.458377 #14129]  INFO -- default-centos:  ],
+I, [2014-03-02T11:12:45.458946 #14129]  INFO -- default-centos:  "Dns": null,
+I, [2014-03-02T11:12:45.460528 #14129]  INFO -- default-centos:  "Image": "39de09893645",
+I, [2014-03-02T11:12:45.464595 #14129]  INFO -- default-centos:  "Volumes": {},
+I, [2014-03-02T11:12:45.466138 #14129]  INFO -- default-centos:  "VolumesFrom": "",
+I, [2014-03-02T11:12:45.466920 #14129]  INFO -- default-centos:  "WorkingDir": "",
+I, [2014-03-02T11:12:45.468498 #14129]  INFO -- default-centos:  "Entrypoint": null,
+I, [2014-03-02T11:12:45.468565 #14129]  INFO -- default-centos:  "NetworkDisabled": false,
+I, [2014-03-02T11:12:45.472485 #14129]  INFO -- default-centos:  "OnBuild": null
+I, [2014-03-02T11:12:45.472563 #14129]  INFO -- default-centos:     },
+I, [2014-03-02T11:12:45.475725 #14129]  INFO -- default-centos:     "State": {
+I, [2014-03-02T11:12:45.476425 #14129]  INFO -- default-centos:  "Running": true,
+I, [2014-03-02T11:12:45.476526 #14129]  INFO -- default-centos:  "Pid": 14025,
+I, [2014-03-02T11:12:45.480619 #14129]  INFO -- default-centos:  "ExitCode": 0,
+I, [2014-03-02T11:12:45.484038 #14129]  INFO -- default-centos:  "StartedAt": "2014-03-02T11:11:51.158261087Z",
+I, [2014-03-02T11:12:45.484515 #14129]  INFO -- default-centos:  "FinishedAt": "0001-01-01T00:00:00Z",
+I, [2014-03-02T11:12:45.485126 #14129]  INFO -- default-centos:  "Ghost": false
+I, [2014-03-02T11:12:45.485555 #14129]  INFO -- default-centos:     },
+I, [2014-03-02T11:12:45.485669 #14129]  INFO -- default-centos:     "Image": "39de09893645fcd29ace448d7fda4c321b2b80b089b8ca317bd4f300b7824dea",
+I, [2014-03-02T11:12:45.486460 #14129]  INFO -- default-centos:     "NetworkSettings": {
+I, [2014-03-02T11:12:45.487268 #14129]  INFO -- default-centos:  "IPAddress": "172.17.0.3",
+I, [2014-03-02T11:12:45.487436 #14129]  INFO -- default-centos:  "IPPrefixLen": 16,
+I, [2014-03-02T11:12:45.488183 #14129]  INFO -- default-centos:  "Gateway": "172.17.42.1",
+I, [2014-03-02T11:12:45.489562 #14129]  INFO -- default-centos:  "Bridge": "docker0",
+I, [2014-03-02T11:12:45.491539 #14129]  INFO -- default-centos:  "PortMapping": null,
+I, [2014-03-02T11:12:45.492024 #14129]  INFO -- default-centos:  "Ports": {
+I, [2014-03-02T11:12:45.492171 #14129]  INFO -- default-centos:      "22/tcp": [
+I, [2014-03-02T11:12:45.492737 #14129]  INFO -- default-centos:          {
+I, [2014-03-02T11:12:45.495320 #14129]  INFO -- default-centos:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:12:45.496332 #14129]  INFO -- default-centos:              "HostPort": "49154"
+I, [2014-03-02T11:12:45.497295 #14129]  INFO -- default-centos:          }
+I, [2014-03-02T11:12:45.499404 #14129]  INFO -- default-centos:      ]
+I, [2014-03-02T11:12:45.500536 #14129]  INFO -- default-centos:  }
+I, [2014-03-02T11:12:45.501838 #14129]  INFO -- default-centos:     },
+I, [2014-03-02T11:12:45.503259 #14129]  INFO -- default-centos:     "ResolvConfPath": "/etc/resolv.conf",
+I, [2014-03-02T11:12:45.503569 #14129]  INFO -- default-centos:     "HostnamePath": "/var/lib/docker/containers/2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7/hostname",
+I, [2014-03-02T11:12:45.503836 #14129]  INFO -- default-centos:     "HostsPath": "/var/lib/docker/containers/2cce3590f7ee202cc9fac44bdf06b8e93943277092ae36bed14bb34cd3a68dc7/hosts",
+I, [2014-03-02T11:12:45.504288 #14129]  INFO -- default-centos:     "Name": "/grave_archimedes",
+I, [2014-03-02T11:12:45.504512 #14129]  INFO -- default-centos:     "Driver": "aufs",
+I, [2014-03-02T11:12:45.504795 #14129]  INFO -- default-centos:     "Volumes": {},
+I, [2014-03-02T11:12:45.507709 #14129]  INFO -- default-centos:     "VolumesRW": {},
+I, [2014-03-02T11:12:45.508443 #14129]  INFO -- default-centos:     "HostConfig": {
+I, [2014-03-02T11:12:45.508541 #14129]  INFO -- default-centos:  "Binds": null,
+I, [2014-03-02T11:12:45.511232 #14129]  INFO -- default-centos:  "ContainerIDFile": "",
+I, [2014-03-02T11:12:45.511628 #14129]  INFO -- default-centos:  "LxcConf": [],
+I, [2014-03-02T11:12:45.512512 #14129]  INFO -- default-centos:  "Privileged": false,
+I, [2014-03-02T11:12:45.516557 #14129]  INFO -- default-centos:  "PortBindings": {
+I, [2014-03-02T11:12:45.517885 #14129]  INFO -- default-centos:      "22/tcp": [
+I, [2014-03-02T11:12:45.518062 #14129]  INFO -- default-centos:          {
+I, [2014-03-02T11:12:45.520382 #14129]  INFO -- default-centos:              "HostIp": "0.0.0.0",
+I, [2014-03-02T11:12:45.520536 #14129]  INFO -- default-centos:              "HostPort": "49154"
+I, [2014-03-02T11:12:45.520665 #14129]  INFO -- default-centos:          }
+I, [2014-03-02T11:12:45.520873 #14129]  INFO -- default-centos:      ]
+I, [2014-03-02T11:12:45.521274 #14129]  INFO -- default-centos:  },
+I, [2014-03-02T11:12:45.521745 #14129]  INFO -- default-centos:  "Links": null,
+I, [2014-03-02T11:12:45.521992 #14129]  INFO -- default-centos:  "PublishAllPorts": false
+I, [2014-03-02T11:12:45.522168 #14129]  INFO -- default-centos:     }
+I, [2014-03-02T11:12:45.524568 #14129]  INFO -- default-centos: }]
+I, [2014-03-02T11:12:45.567701 #14129]  INFO -- default-centos: Finished creating <default-centos> (0m0.23s).

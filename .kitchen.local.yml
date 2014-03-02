@@ -1,0 +1,18 @@
+---
+driver_plugin: docker
+
+platforms:
+- name: ubuntu
+  run_list:
+  - recipe[apt]
+- name: debian
+  driver_config:
+    image: debian
+  run_list:
+  - recipe[apt]
+- name: centos
+  driver_config:
+    image: centos
+    platform: rhel
+  run_list:
+  - recipe[yum]

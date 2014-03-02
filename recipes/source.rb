@@ -18,6 +18,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+Chef::Log.warn "The recipe gerrit::source is deprecated and will be removed in later versions of this cookbook"
+
 include_recipe "maven"
 
 directory "#{node['gerrit']['home']}/src/git" do

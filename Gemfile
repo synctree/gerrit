@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'test-kitchen',    git: 'git://github.com/opscode/test-kitchen.git',    branch: 'master'
-gem 'kitchen-vagrant', git: 'git://github.com/opscode/kitchen-vagrant.git', branch: 'no-vagrant-gem', group: 'integration'
+gem 'berkshelf'
+gem 'kitchen-docker'
