@@ -202,13 +202,13 @@ template "#{node['gerrit']['home']}/scripts/repack-repositories.sh" do
   mode 0744
 end
 
-cron "repack-repositories" do
-  hour "2"
-  minute "0"
-  weekday "0"
-  command "#{node['gerrit']['home']}/scripts/repack-repositories.sh"
-  user node['gerrit']['user']
-end
+#cron "repack-repositories" do
+#  hour "2"
+#  minute "0"
+#  weekday "0"
+#  command "#{node['gerrit']['home']}/scripts/repack-repositories.sh"
+#  user node['gerrit']['user']
+#end
 
 
 ####################################
