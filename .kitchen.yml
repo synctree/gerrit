@@ -10,11 +10,18 @@ platforms:
   - name: ubuntu-12.04
 
 suites:
-  - name: default
+#  - name: default
+#    run_list:
+#      - recipe[gerrit::default]
+#    attributes:
+#      mysql:
+#        server_debian_password: "foo"
+#        server_root_password: "foo"
+#        server_repl_password: "foo"
+  - name: DB-H2
     run_list:
       - recipe[gerrit::default]
     attributes:
-      mysql:
-        server_debian_password: "foo"
-        server_root_password: "foo"
-        server_repl_password: "foo"
+      gerrit:
+        database:
+          type: "H2"
