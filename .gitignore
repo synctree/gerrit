@@ -13,3 +13,4 @@ Berksfile.lock
 bin/*
 .bundle/*
 
+.idea
