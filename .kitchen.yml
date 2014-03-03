@@ -7,8 +7,12 @@ provisioner:
 
 platforms:
   - name: centos-6.4
-  - name: debian-wheezy
+  - name: debian-7.4
+    run_list:
+    - recipe[apt::default]
   - name: ubuntu-12.04
+    run_list:
+    - recipe[apt::default]
 
 suites:
   - name: DB-H2
